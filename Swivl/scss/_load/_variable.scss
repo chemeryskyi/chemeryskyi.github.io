@@ -1,0 +1,28 @@
+html {
+    font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    color: #3e4056;
+    background-color: rgba(#ecf1f8, .4);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.flex {
+    display: flex;
+}

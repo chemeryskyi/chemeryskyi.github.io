@@ -1,0 +1,385 @@
+@media (max-width: 1200px) {
+
+    .tourSlider__img {
+        width: auto;
+        height: 100%;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .whatHalal {
+        .row {
+            flex-direction: column-reverse;
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 100vw;
+                left: 50%;
+                height: 100%;
+                transform: translateX(-50%);
+                background-color: #f3fdfd;
+            }
+        }
+
+        .col-6 {
+            max-width: none;
+            flex: 0 0 100%
+        }
+
+        &__img {
+            margin-right: 0;
+                        width: 100vw;
+                        left: 50%;  
+                        transform: translateX(-50%);
+                        margin-bottom: 1rem;    
+
+            img {
+                position: relative;
+                height: auto;
+                width: 100%;    
+                
+            }
+        }
+        &__content:after{
+            display: none;
+        }
+    }
+    .contact{
+        .col-5{
+            flex: 0 0 65%;
+            max-width: none;
+            padding: 0;
+
+        }
+        .col-2{
+             flex: 0 0 30%;
+            max-width: 40rem;
+        }
+            .contact__last{
+        
+        flex: 0 0 100%;
+        max-width: none;
+        order: -1
+    }
+    .contact__first{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    }
+
+    .contact__form{
+        max-width: 60rem;
+        margin-right: auto;margin-left: auto;
+        margin-bottom: 3rem;
+    }
+
+    .header__fixed{
+
+        .row{
+            justify-content: flex-end;
+           
+        }
+       .header__logo, .header__social{
+            margin-right: auto;
+        }
+        .header__contact{
+            padding-left: 1.5rem;
+            &--ico{
+                left: -.9rem;
+            }
+            svg{
+                height: 2rem;
+                width: auto;
+            }
+        }
+    }
+    .header__burger{
+        display: flex;
+    }
+    .header__nav{
+        display: none;
+        font-size: 1.1rem;
+        &.active{
+            background-color: #fff;
+            // display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(100%);
+            font-size: 1.5rem;
+            padding: 3rem 1rem;
+            width: auto;
+            box-shadow: -3px 7px 11px rgba(#000, .1);
+            a{
+                padding: 1rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 9px;
+    }
+
+    .main__btn {
+        max-width: 25rem;
+        width: 100%;
+    }
+
+    .select__active {
+        padding-right: 2rem;
+    }
+}
+
+
+
+@media (max-width:768px) {
+    html {
+        font-size: 8px;
+    }
+
+
+    .tour__bottom {
+        // flex-wrap: wrap;
+        // &--item{
+        //  width: 50%;
+        // }
+    }
+
+    .hot {
+        .container {
+            max-width: none;
+        }
+    }
+
+    .select {
+        width: 50%;
+        margin-bottom: 1rem;
+
+        &__group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .select {
+                &:nth-child(2n) {
+                    border: none;
+
+                    .select__active,
+                    input {
+                        width: 100%;
+
+                        border-radius: 0 $brs $brs 0;
+                    }
+                }
+
+                &:nth-child(2n+1) {
+
+                    .select__active,
+                    input {
+                        width: 100%;
+
+                        border-radius: $brs 0 0 $brs;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .datepicker.-from-bottom- {
+        transform: translate(-10%, 8px);
+    }
+    .header__fixed .row{
+        justify-content: center;
+    }
+.header__fixed .header__social{
+    order:-4
+}
+.header__fixed .header__logo{
+    order: -5
+}
+.header__burger{
+    order: -3;
+}
+    .header .row {
+        align-items: center;
+
+    }
+    .header__fixed .header__contact--number{
+        padding: 0 1rem;
+    }
+
+    .header__contact {
+        display: inline-flex;
+        align-items: center;
+
+        &--number {
+            margin: 1rem 2rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    .assessment .container {
+        flex-direction: column;
+    }
+
+    .assessment__btn {
+        margin-left: 0;
+    }
+
+    .assessment__header {
+        margin-right: 0;
+    }
+
+    .assessment__value {
+        margin: 1rem;
+    }
+
+    .tourSlider {
+        .container {
+            padding: 0;
+        }
+    }
+
+    .slick-dots li {
+        border: 1px solid $elColor
+    }
+    .contact .row{
+        flex-direction: column;
+        .col-2, .col-5{
+            max-width: none;
+            flex: 0 0 100%
+        }
+        .col-2{
+            margin-bottom: 2rem;
+        }
+    }
+    .contact{
+        padding-top: 2rem;
+        margin-top: 0;margin-bottom: 0;
+    }
+    .contact .contact__last{
+        padding: 0 15px;
+        .contact__form--input{
+            width: 100%;
+        }
+    }
+    .contact__form{
+        max-width: 45rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .select {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        &__group {
+
+
+            .select {
+                &:nth-child(2n) {
+                    border: none;
+
+                    .select__active,
+                    input {
+                        width: 100%;
+
+                        border-radius: $brs;
+                    }
+                }
+
+                &:nth-child(2n+1) {
+                    border: none;
+
+                    .select__active,
+                    input {
+                        width: 100%;
+
+                        border-radius: $brs;
+                    }
+                }
+            }
+        }
+    }
+    .list{
+        column-count: 1
+    }
+    .whatHalal__content{
+        padding: 1rem 2rem;
+    }
+
+    .datepicker.-from-bottom- {
+        transform: translate(1%, 8px);
+    }
+
+    .tourSlider__info {
+        margin-right: auto;
+        margin-left: auto;
+        // width: 96%;
+    }
+
+    .tourSlider__img {
+        position: relative;
+        height: auto;
+        width: 100%;
+        height: 20rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .tourSlider__info {
+        max-width: none;
+    }
+
+    .tourSlider__container {
+        padding-bottom: 5rem;
+    }
+    .contact__form--btn{
+        margin-right: auto;margin-left: auto;
+    }
+    .popup__star{
+         .popup__box{
+            max-width: 45rem;
+            input{
+                width: 100%;
+
+            }
+            .select{
+                width: 100%;
+                margin-bottom: 1rem;
+                margin-right: auto;margin-left: auto;
+                max-width: none;
+                min-width: 25rem;
+            }
+            textarea{
+                width: 100%;
+                max-width: none;
+                height: 15rem;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 320px) {}

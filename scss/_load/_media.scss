@@ -1,0 +1,38 @@
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+
+@media (max-width:768px) {
+    .example-item {
+        width: 50%;
+		margin: 0;
+        &:hover {
+            // margin-top: -2rem;
+
+            transform: scale(1.01);
+            border-radius: 3px;
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 480px) {
+	 .example-item {
+        width: 100%;
+		margin: 0;
+
+    }
+    .form__top input, .form__top .input__file{
+    	width: 100%;
+    }
+    .popup__box{
+    	width: 90%;
+    	margin-left: 0;
+    }
+
+}
+
+@media (max-width: 320px) {}

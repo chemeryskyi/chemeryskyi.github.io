@@ -1,0 +1,360 @@
+@media (max-width: 1200px) {
+    .sectionHeader {
+        font-size: 6rem;
+
+        span {
+            display: inline;
+        }
+    }
+            .footer__slogan{
+        font-size: 1.5rem;
+        max-width: 40rem;
+    }
+    .footer__phone{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 9px;
+    }
+
+    .main {
+        background-size: auto 100%;
+
+        &__list {
+            position: relative;
+
+            li {
+                z-index: 2;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: -10%;
+                left: -00%;
+                width: 100%;
+                height: 150%;
+                background-color: rgba(#fff, .7);
+                filter: blur(10px)
+            }
+        }
+    }
+
+    .old__bottom {
+        font-size: 3rem;
+    }
+
+    .adventages__content {
+        flex-wrap: wrap;
+    }
+
+    .adventages__item {
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .adventages__text span {
+        display: inline;
+    }
+    .problem .container{
+    	flex-direction: column;
+    	align-items: center;justify-content: center;
+    }
+    .problem__circle{
+    	margin-bottom: 3rem;
+    }
+    .problem__header{
+    	text-align: center;
+    	margin-bottom: 3rem;
+    }
+    .problem__bottom{
+		display: inline-block;
+		left: 50%;
+		transform: translateX(-50%)
+    }
+    .problem__info{
+    	padding-left: 0;
+    }
+    .instruction__content{
+		flex-wrap: wrap;
+    }
+    .instruction__item{
+    	width: 33.333%;
+    	margin-bottom: 2rem;
+    }
+}
+
+
+@media (max-width:768px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main {
+        background-position: 50% 100%;
+
+        &__header {
+            font-size: 6rem;
+        }
+
+        &__list {
+            &:after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    .what__content {
+        flex-wrap: wrap;
+    }
+
+    .what__img {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .what__info {
+        width: 100%;
+    }
+
+    .what__header {
+        text-align: center;
+        font-weight: 700;
+
+        span {
+            display: inline;
+        }
+
+    }
+
+    .what__list {
+        max-width: none;
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
+
+    .what__btn {
+        margin-right: auto;
+        left: auto;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%)
+    }
+
+    .sectionHeader {
+        font-size: 5rem;
+    }
+
+    .old__content {
+        flex-wrap: wrap;
+    }
+
+    .old__item {
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .old__bottom {
+        font-size: 2.5rem;
+    }
+    .header__logo{
+        img{height: 5.5rem;}
+    }
+    .header__what{
+        font-size: 1.6rem;
+    }
+        .footer{
+        &__header{
+            font-size: 3rem;
+        }
+        &__phone{
+            font-size: 3rem;
+        }
+    }
+        .footer__slogan, .footer__contact p, .footer__contact a{
+        font-size: 1.5rem;
+        max-width: 30rem;
+    }
+    .footer__phone{
+        font-size: 3rem;
+    }
+    .footer__header{
+        margin-bottom: 1rem;
+    }
+    .footer__logo{
+
+        margin-bottom: 1rem;
+        img{
+            height: 4rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .footer .btn{
+        font-size: 2rem;
+    }
+    .footer__phone{
+        font-size: 2.3rem;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    // .header .container {
+    //     flex-direction: column;
+    //     justify-content: center;
+    // }
+
+    // .header__contact {
+    //     text-align: center;
+    //     margin-top: 1rem;
+    // }
+
+    .sectionHeader {
+        font-size: 4.5rem;
+    }
+
+    .old__item {
+        width: 90%;
+    }
+
+    .old__bottom {
+        padding-left: 0rem;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .old__bottom:before {
+        transform: translate(-50%, -60%) scale(.7);
+        left: 50%;
+        top: 0;
+    }
+    .instruction__item{
+    	width: 50%;
+    }
+    .instruction__text{
+    	font-size: 1.8rem;
+    	text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0; 
+        img{
+            height:4.2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .header__what{
+        display: none;
+    }
+    .footer__right{
+        align-items: center;
+    }
+    .footer__logo{
+        flex-direction: column;
+
+    }
+
+    // .header__what span {
+    //     display: inline-block;
+    //     margin-top: 1rem;
+    // }
+
+    .main {
+        padding-top: 5rem;
+
+        &__header {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            span {
+                display: inline-block;
+            }
+        }
+    }
+
+    .sectionHeader {
+        font-size: 3.5rem;
+    }
+
+    .adventages__item {
+        width: 100%;
+    }
+    .problem__circle{
+    	transform: scale(.9)
+    }
+	.problem__content{
+		flex-direction: column;
+	}
+	.problem__text span{
+		display: inline;
+	}
+	.problem__item{
+		width: 100%;
+		margin-bottom: 3rem;
+	}
+	.problem__img img{
+		max-width: 60px;
+	}
+	.instruction__item{
+    	width: 100%;
+    }
+    .culculator__input--box{
+    	width: 100%;
+    }
+    .culculator__input--box:nth-child(1):after{
+    	display: none;
+    }
+    // .footer{
+    // 	padding-bottom: 0rem;
+    // }
+    // .footer__up{
+    // 	top: auto;
+    // 	position: relative;
+    // 	left: 50%;
+    // 	margin-top: 7rem;
+    // 	right: auto;
+    // }
+        .footer{
+        &__header, &__def{
+            text-align: center;
+        }
+        &__content{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__btn{
+            margin-top: 2rem;
+        }
+    }
+        .footer__phone{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 320px) {}
+
+// .header,
+// .main,
+// .what,
+// .old,
+// .adventages,
+// .problem,
+// .instruction,
+// .culculator,
+// .example,
+// .footer {
+//     display: none;
+// }

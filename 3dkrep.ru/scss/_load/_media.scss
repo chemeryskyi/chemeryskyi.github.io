@@ -1,0 +1,735 @@
+
+@media (max-width: 1200px) {
+	.advantages{
+		margin-top: -1.3rem;
+		margin-bottom: -1.3rem;
+	}
+	.order{
+		&__header{
+			font-size: 3rem;
+			display: flex;
+			align-items: center;
+		}
+	}
+	.share{
+		padding-bottom: 4rem;
+		&__header{	
+			font-size: 3.5rem;
+			text-align: center;
+			margin-bottom: 4rem;
+		}
+		&__img{
+			// width: 100%;
+			min-width: 18rem;
+			max-width: 18rem;
+		}
+		&__info{
+			&--header{
+				font-size: 2rem;
+			}
+		}
+		&__price{
+			&--new{
+				font-size: 3rem;
+			}
+		}
+	}
+	.choose{
+		&__subtitle{
+			font-size: 3rem;
+		}
+	}
+	.failure__circle:after{
+		width: 31rem;
+		height: 31rem;
+	}
+	.failure__percent--description{
+		font-size: 1.9rem;
+	}
+	.choose__list{
+		font-size: 1.5rem;
+		    min-height: 12rem;
+
+	}
+	.installation__text{
+		font-size: 1.7rem;
+	}
+	.delivery{
+		&__item{
+			padding: 0 15px;
+			align-items: center;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.failure{
+		margin-top: -5rem;
+	}
+	.example{
+	background-color: #f7f7f7;
+	padding: 5rem 0 3rem;
+	font-size: 0;
+		&__header{
+			font-size: 3.8rem;
+			font-weight: 700;
+			letter-spacing: 0.038rem;
+			margin-bottom: 2.5rem;
+		}
+		&__content{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			
+		}
+		&__left{
+			// display: flex;
+			width: 75.5%;
+		}
+		&__right{
+			width: 24.2%;
+			padding-left: 5px;
+		}
+		&__top{
+			display: flex;
+			align-items: flex-end;
+			&--big{
+				padding-right: 5px;
+				width: 66.5%;
+			} 
+			&--min{
+				padding: 0 5px;
+				width: 100%-66.5%;
+			}
+		}
+		&__bottom{
+			&--left, &--right{
+				padding: 0 5px;
+			}
+			&--left{
+				width: 32%;
+				padding-left: 0;
+			}
+			&--right{
+				width:100%-32%;
+			}
+		}
+		img{
+			margin-bottom: 10px;
+		}
+
+	}
+	.calculator__choose--header{
+		width: 50%;
+	}
+	.calculator__choose--variantBox{
+		width: 100%;
+	}
+	.calculator__choose--btnBox{
+		width: 100%;
+		text-align: center;
+	}
+	.calculator__choose--btn{
+		display: inline-block;
+		width: auto;
+		margin-top: 4rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		position: relative;
+
+	}
+}
+
+@media (max-width: 991px) {
+	html{
+		font-size: 9px;
+	}
+	.order{
+		.df{
+			flex-wrap: wrap;
+		}
+		&__header{
+			width: 100%;
+			margin-bottom: 2rem;
+			text-align: center;
+			display: block;
+		}
+		&__form{
+			width: 100%;
+		}
+	}
+	.share{
+		// &__content{
+		// 	flex-wrap: wrap;
+		// }
+		&__item{
+			width: 100%;
+			flex-direction: column;	
+			&:nth-child(2){
+				.share__info--header{
+					margin-top: .4rem;
+				}
+			}
+			
+		}
+		&__img{
+			width: 100%;
+			min-width: auto;
+			max-width: none;
+			max-width: 22rem;
+			margin-bottom: 4rem;
+			margin-right: 0;
+		}
+		&__info{
+			&--header{
+				text-align: center;
+				font-size: 3rem;
+			}
+		}
+		&__price{
+			&--new, &--old{
+				text-align: center;
+			}
+			
+		}
+	}
+	.failure{
+		&__list{
+			font-size: 2rem;
+			li{
+				padding-left: 2.5rem;
+				position: relative;
+				span{
+					position: absolute;
+					left: 0;
+					top: -.2rem;
+				}
+			}
+		}
+	}
+	.choose{
+		&__header{
+			text-align: center;
+			font-size: 3.1rem;
+		}
+		&__subtitle{
+			font-size: 2.5rem;
+			text-align: center;
+		}
+		&__content{
+			// flex-wrap: wrap;
+			// justify-content: center;
+		}
+		&__info{
+			width: 100%;
+		}
+		&__btn{
+			margin: 0;
+			left: 50%;
+			transform: translateX(-50%)
+		}
+		&__item{
+			width: 100%;
+			// margin-bottom: 3rem;
+			flex-direction: column;
+			justify-content: center;
+			&--header{
+				text-align: center;
+			}
+		}
+		&__list{
+			min-height: auto;
+		}
+		&__img{
+			margin: 0;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+	}
+	.installation__step{
+		width: 50%;
+	}
+	.installation__video{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.installation__header{
+		text-align: center;
+		font-size: 3rem;
+	}
+	.payment{
+
+		&__item{
+			width: 20%;
+			height: 5rem;
+
+			img{
+				display: block;
+				margin-right: auto;margin-left: auto;
+				height: 100%;
+			}
+		}
+	}
+	.calculator__result--line{
+		flex-wrap: wrap;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 2rem;
+		&:last-of-type{
+			margin-bottom: 0;
+			border: none;
+		}
+	}
+	.calculator__result--col{
+		text-align: center;
+		&Need{
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+		&Pack, &PriceOne, &PriceAll{
+			margin-right: 0;
+			width: 33.3333%;
+			padding: 0 5px;
+		}
+	}
+	.popup__thanks--video{
+		height: 35rem;
+	}
+}
+
+@media (max-width: 769px) {
+	html{
+		font-size: 8px;
+	}
+	.main{
+		&__header{
+			text-align: center;
+			font-size: 5rem;
+		}
+		&__subtitle{
+			font-size: 3rem;
+			text-align: center;
+		}
+		&__what{
+			justify-content: center;
+			&--item{
+				margin: 0 1rem;
+			}
+		}
+	}
+	.advantages{
+		margin-top: -1.5rem;
+		margin-bottom: -1.5rem;
+		padding-bottom: 4rem;
+		.df{
+			flex-wrap: wrap;
+		}
+		&__item{
+			width: 50%;
+			margin-bottom: 3rem;
+			margin-right: 0;margin-left: 0;
+			&:last-child svg{
+				position: relative;
+				transform: translateX(2rem)
+			}
+		}
+		&__text{
+			max-width: none;
+			span{
+				display: inline-block;
+			}
+		}
+	}
+	.forWhat {
+		&__header{
+			// font-size: 3.5rem;
+			text-align: center;
+		}
+		.df{
+			flex-direction: column;
+		}
+		&__text{
+			width: 100%;
+			padding: 0;
+			margin-bottom: 2rem;
+			text-align: center;
+		}	
+		&__link{
+			width: 100%;
+			padding: 0;
+		}	
+	}
+	.order{
+		&__form{
+			flex-wrap: wrap;
+			input{
+				width: 100%;
+				max-width: 40rem;
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 2rem;
+			}
+			&--btnBox{
+				width: 100%;
+				max-width: 40rem;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+		}
+	}
+	.failure{
+		padding-bottom: 3rem;
+		&__content{
+			flex-direction: column;
+		}
+		&__circle{
+			margin-bottom: 5rem;
+		}
+	}
+	.uneven{
+		padding-bottom: 1rem;
+		&__header{
+			text-align: center;
+		}
+		&__content{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			width: 50%;
+			margin-bottom: 3rem;
+		}
+	}
+	.choose{
+		&__content{
+			flex-direction: column;
+		}
+		&__item{
+			margin-bottom: 3rem;
+		}
+		&__list{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.payment{
+		
+		&__item{
+			width: 50%;
+			height: 5rem;
+
+			img{
+				display: block;
+				margin-right: auto;margin-left: auto;
+				height: 100%;
+			}
+		}
+	}
+	.footer{
+		&__header{
+			font-size: 3rem;
+		}
+		&__phone{
+			font-size: 3rem;
+		}
+	}	
+	.calculator{
+		padding: 4rem 0;
+	}
+	.calculator__header{
+		text-align: center;
+	}
+	.calculator__choose--headerLine, .calculator__choose--wall{
+		flex-wrap: wrap;
+	}
+	.calculator__choose--header, .calculator__select--box, .calculator__sizeBox{
+		width: 100%;
+	}
+	.calculator__select{
+		margin-bottom: 2rem;
+		margin-right: auto;margin-left: auto;
+		    max-width: 43.6rem;
+	}
+	.calculator__sizeBox{
+		justify-content: center;
+	}
+	.calculator__choose--wall{
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #eee;
+	}
+	.calculator__choose--wallRemove{
+		top: 1rem;
+		right: 4rem;
+	}
+
+}
+
+@media (max-width: 576px) {
+	.main{
+		&__header{
+			font-size: 6rem;
+
+		}
+		&__subtitle{
+			margin-top: 2rem;
+			font-size: 2rem;
+			// text-shadow: 0 0  rgba(#fff, .5)
+		}
+		&__what{
+			&--text{
+				font-size: 2rem;
+			}
+		}
+		background-position: 50% 100%;
+	}
+	.advantages{
+		margin-top: -2rem;
+		margin-bottom: -2rem;
+		&__item{
+			padding: 0;
+			font-size: 1.7rem;
+			&:nth-child(2n){
+				padding-left: 10px;
+			}
+
+		}
+	}
+	.share{
+		&__content{
+			flex-direction: column;
+		}
+		.share__btn{
+			padding-left: 4rem;padding-right: 4rem;
+		}
+	}
+	.choose{
+		&__header{
+			font-size: 2.5rem;
+		}
+		&__subtitle{
+			font-size: 2rem;
+		}
+	}
+	.example__content{
+		flex-wrap: wrap;
+	}
+	.example__left{
+		width: 100%;	
+	}
+	.example__right{
+		padding-right: 5px;
+		display: flex;
+		width: 100%;
+		img{
+			width: 50%;
+		}
+		&--top{
+			width: 50%;
+			display: flex;
+			padding-right: 10px;
+			&>img{
+				width: 100%;
+			}
+		}
+		
+		&--right{
+			display: none;
+		}
+
+	}
+	.calculator__result--linePrice{
+		flex-direction: column;
+	}
+	.calculator__result--text{
+		margin-bottom: 1.5rem;
+	}
+	.calculator__result--colPriceOne, .calculator__result--colPriceAll{
+		width: 50%;
+	}
+	.calculator__result{
+		padding-right: 3rem;padding-left: 3rem;
+	}
+	.calculator__result--colNeed{
+		margin-right: 0;
+	}
+	.calculator__result--colPack{
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	.calculator__result--price{
+		padding-left: 3rem;
+		padding-right: 3rem;
+		text-align: center;
+		font-size: 3rem;
+	}
+	.calculator__result--text{font-size: 3rem;}
+}
+@media (max-width: 480px) {
+	.header{
+		&__logo{
+			img{
+				height: 4rem;
+			}
+		}
+		&__phone{
+			span{
+				font-size: 1.5rem;
+			}
+			&--ico{
+				height: 3rem;
+				width: 3rem;
+				svg{
+					height: 1.7rem;
+				}
+			}
+		}	
+	}
+	.main{
+		&__what{
+			&--img{
+				width: 100%;
+			}
+		}
+	}
+	.forWhat {
+		&__header{
+			font-size: 3rem;
+		}
+	}
+	.failure{
+		&__list{
+			font-size: 1.8rem;
+		}
+		&__circle{
+			margin-right: 0;
+		}
+	}
+	.uneven{
+		padding-bottom: 1rem;
+		&__header{
+			text-align: center;
+		}
+		&__content{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			width: 100%;
+		}
+	}
+	.installation{
+		padding: 4rem 0 2rem;	
+
+		&__header{
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+		}
+		&__step{
+			padding: 0 5px;
+			margin-bottom: 2rem;
+		}
+		&__text{
+			font-size: 1.2rem;
+			text-align: center;
+
+
+		}
+	}
+	.delivery{
+		&__content{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__header{
+			font-size: 3.5rem;
+			text-align: center;
+		}
+		&__item{
+			width: 50%;
+			width: auto;
+			margin-bottom: 2rem;
+			justify-content: center;
+			img{
+				height: 4rem;
+				width: auto;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+	.payment{
+		padding-bottom: 3rem;
+		&__content{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			width: 50%;
+			height:6rem;
+			margin-bottom: 2rem;
+
+			img{
+				display: block;
+				margin-right: auto;margin-left: auto;
+				height: 100%;
+			}
+		}
+	}
+	.footer{
+		&__header, &__def{
+			text-align: center;
+		}
+		&__content{
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		&__btn{
+			margin-top: 2rem;
+		}
+	}
+	.calculator__header{
+		font-size: 3rem;
+	}
+	.popup__thanks--video{
+		height: 23rem;
+		position: relative;
+		    width: 310px;
+    margin-left: -15px;
+	}
+		
+}
+
+@media (max-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
+
+// .header,
+// .main,
+// .advantages,
+// .forWhat,
+// .order,
+// .share,
+// .failure,
+// .uneven,
+// .choose,
+// .installation,
+// .calculator,
+// .payment,
+// .delivery,
+// .example,
+// .foote
+// {
+// 	display: none;
+// }

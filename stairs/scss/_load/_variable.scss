@@ -1,0 +1,213 @@
+@font-face {
+font-family: 'Avenir Next Cyr';
+src: url('../fonts/AvenirNextCyr-Bold.eot');
+src: url('../fonts/AvenirNextCyr-Bold.eot?#iefix') format('embedded-opentype'),
+url('../fonts/AvenirNextCyr-Bold.woff') format('woff'),
+url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+@font-face {
+font-family: 'Avenir Next Cyr';
+src: url('../fonts/AvenirNextCyr-Regular.eot');
+src: url('../fonts/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/AvenirNextCyr-Regular.woff') format('woff'),
+url('../fonts/AvenirNextCyr-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: "Wi Guru -1";
+src: url('../fonts/Wi Guru -1.ttf');
+font-weight: 400;
+font-style: normal;
+}
+html{
+	font-size: 10px;
+}
+*{
+	outline: none;
+}
+h1,h2,h3,h4,p,ul{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Avenir Next Cyr',  sans-serif;
+	color: #333333;
+	font-weight: 400;
+}
+h1,h2,h3,h4{
+	font-family: "Wi Guru -1", sans-serif;
+	font-weight: 400;
+}
+
+$main: #e29c45;
+$mainHover :  #c5812c;
+
+.btn{
+	background-color: $main;
+	color: #ffffff;
+	display: block;
+	text-align: center;
+	transition: .5s;
+	font-weight: 700;
+	width: 100%;
+	border: .2rem solid transparent;
+	    position: relative;
+    z-index: 5;
+	&--big{
+		padding: 1.6rem 2rem;
+		font-size: 1.6rem;
+		max-width: 25.3rem;
+		
+		margin-right: auto;
+		margin-left: auto;
+	}
+	&--min{
+		font-size: 1.1rem;
+		padding: .9rem 2rem;
+		max-width: 16rem;
+	}
+	&:hover{
+		cursor: pointer;
+		// box-shadow: 5px 5px 15px rgba(#000, .5)
+		background-color: $mainHover;
+	}
+	&:active{
+		box-shadow:inset 0 0 30px rgba(#000, .5)
+	}
+
+}
+.input{
+    		&Box{
+				display: block;
+				position: relative;
+				margin-bottom: 5.5rem;
+				max-width: 28.3rem;
+
+
+				label{
+					position: absolute;
+					// opacity: 0;
+					font-size: 1.6rem;
+					border-bottom: .2rem solid transparent;
+					padding-bottom: 1.3rem;
+					bottom: 0;
+					left: 0;
+					transition: .5s;
+
+					&.active{
+						transform: translateY(-100%)
+					}
+				}
+				input{
+					width: 100%;
+					border: none;
+					border-bottom: .2rem solid $main;
+					padding-bottom: 1.3rem;
+					font-size: 1.6rem;
+					background-color: transparent;
+				}
+    		}
+    	}
+.form__comment{
+	position: absolute;
+	color: red;
+	bottom: 0;
+	font-size: 1.2rem;
+	margin-top: .5rem;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	text-align: center;
+	width: 100%;
+
+}
+.select{
+	border-bottom: .2rem solid $main;
+	position: relative;
+	font-size: 1.8rem;
+	margin-bottom: 2rem;
+	max-width: 60rem;
+	&.active{
+		z-index: 60;
+		.select__list{
+			display: block;
+		}
+		.select__active{
+			&:after{
+				transform: translateY(-50%) scale(-1,-1)
+			}
+		}
+	}
+	&__active{
+		padding-bottom: 1.3rem;
+		padding-right: 2rem;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 5px 0 5px;
+			border-color: $main transparent transparent transparent;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: .5s;
+
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	&__list{
+		width: 100%;
+		list-style: none;
+		position: absolute;
+		background:$main;
+		color: #fff;
+		padding: 1.3rem 0;
+		display: none;
+		max-height: 30rem;
+		overflow: auto;
+		li{
+			padding:.75rem 1.9rem;
+			transition: .5s;
+			&:hover{
+				color: #76543b;
+				cursor: pointer;
+			}
+
+		}
+
+	}
+}
+
+input.error{
+	border-color: red !important;
+}
+
+            @keyframes adventageSvg{
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.5);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+             @keyframes adventageSvgSec{
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.5);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }

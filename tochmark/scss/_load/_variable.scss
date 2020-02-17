@@ -1,0 +1,146 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+$red: #ff4949;
+
+
+.btn {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.031rem;
+    background-color: $red;
+    border-radius: 3rem;
+    box-shadow: inset -0.1rem 0 0.7rem rgba(0, 0, 0, 0.15);
+    display: block;
+    max-width: 26rem;
+    text-align: center;
+    padding: 2.2rem;
+    width: 100%;
+    border: none;
+    margin-right: auto;margin-left: auto;
+    transition: .5s;
+    &:hover{
+        cursor: pointer;
+        background-color: #df5c5c;
+    }
+    &:active{
+        transform: scale(.98)
+    }
+}
+
+.label__box{
+    display: flex;
+    &:hover{
+        cursor: pointer;
+    }
+}
+/* Скрываем реальный чекбокс */
+.checkbox {
+    display: none;
+}
+/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+.checkbox-custom {
+    position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+    // Style for "Прямоуголь"
+    width: 1.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #000;
+    opacity: 0.5;
+    margin-right: .5rem;
+}
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked + .checkbox-custom::before {
+    content: "";             /* Добавляем наш псевдоэлемент */
+    display: block;          /* Делаем его блочным элементом */
+    position: absolute;      /* Позиционируем его абсолютным образом */
+    top: 0;left: 0;right: 0;bottom: 0;
+    background:transparent url('../img/tick.svg') center no-repeat;
+    background-size: 90%;
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.fadeInUp {
+    animation: fadeInUp 1.6s forwards;
+}

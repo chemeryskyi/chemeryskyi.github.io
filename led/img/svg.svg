@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.0" id="Layer_2" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 572.9 396.9" enable-background="new 0 0 572.9 396.9" xml:space="preserve">
+    <switch>
+        <foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
+            <i:pgfRef xlink:href="#adobe_illustrator_pgf">
+            </i:pgfRef>
+        </foreignObject>
+        <g i:extraneous="self">
+            <path fill="#F02051" d="M570.1,57.2c-5.6,57.1-19.8,112.7-42.2,165.8c-28.9,68.2-70.2,129.5-122.8,182.1L0,0h572.9v0
+			C572.9,19.2,572,38.3,570.1,57.2" />
+            <g>
+                <g>
+                    <g>
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-528.062" y1="572.9098" x2="-527.062" y2="572.9098" gradientTransform="matrix(0 -331.9676 -331.9676 0 190473.9219 -175180.5156)">
+                            <stop offset="0.30" style="stop-color:transparent" />
+                            <stop offset="0" style="stop-color:rgba(0,0,0, 0.2)" />
+                        </linearGradient>
+                        <rect y="0" fill="url(#SVGID_1_)" width="572.9" height="57.2" />
+                        <path display="none" fill="none" d="M-6,2l0,57.2h570.1c1.9-18.9,2.8-38,2.8-57.2L-6,2z" />
+                    </g>
+                    <rect x="-6" y="2" display="none" fill="none" width="572.9" height="57.2" />
+                </g>
+            </g>
+        </g>
+    </switch>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>a/icon_play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15,8 C14.9928722,8.70812231 14.6513619,9.37508906 14.0711111,9.81411239 L14.0711111,9.81411239 L7.96,14.4956927 L7.96,14.4956927 C7.22814254,15.0495569 6.23090645,15.1562772 5.3894228,14.7707858 C4.54793914,14.3852944 4.00892302,13.5748029 4,12.6815804 L4,3.31841964 C4.00892302,2.42519713 4.54793914,1.61470561 5.3894228,1.22921421 C6.23090645,0.843722816 7.22814254,0.950443092 7.96,1.50430725 L7.96,1.50430725 L14.0711111,6.18588761 L14.0711111,6.18588761 C14.6513619,6.62491094 14.9928722,7.29187769 15,8 L15,8 Z" id="path-1"></path>
+    </defs>
+    <g id="a/icon_play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Mask-Copy-6" fill="#ECF1F8" opacity="0" x="0" y="0" width="16" height="16"></rect>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Path" fill="#3E4056" xlink:href="#path-1"></use>
+        <g id="_/gun-powder" mask="url(#mask-2)" fill="#3E4056">
+            <rect id="Color" x="0" y="0" width="16" height="16"></rect>
+        </g>
+    </g>
+</svg>
