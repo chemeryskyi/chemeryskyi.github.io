@@ -22,17 +22,20 @@ function submitForm() {
     });
 
     if (formValid) {
-        fetch(`http://x.chemeryskyi.ru/send.php`, {
+
+        var data = new FormData();
+        data.append('role', form.querySelector('input[name="role"]:checked').value);
+        data.append('motivation', form.querySelector('textarea[name="motivation"]').value);
+        data.append('contact', form.querySelector('input[name="contact"]').value);
+        data.append('cv',form.querySelector('input[name="cv"]').files[0]);
+
+        fetch(`/sntmail.php`, {
             method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                role: form.querySelector('input[name="role"]:checked').value,
-                motivation: form.querySelector('textarea[name="motivation"]').value,
-                contact: form.querySelector('input[name="contact"]').value,
-            })
+            // mode: 'cors',
+            // headers: {
+            //     'Content-Type': 'application/json'
+            // },
+            body: data
         })
         popup.close();
         btn.disabled = false;
