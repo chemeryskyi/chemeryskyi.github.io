@@ -30,7 +30,7 @@ function submitForm() {
             },
             body: JSON.stringify({
                 role: form.querySelector('input[name="role"]:checked').value,
-                motivation: form.querySelector('input[name="motivation"]').value,
+                motivation: form.querySelector('textarea[name="motivation"]').value,
                 contact: form.querySelector('input[name="contact"]').value,
             })
         })
