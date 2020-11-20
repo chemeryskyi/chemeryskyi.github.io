@@ -22,7 +22,18 @@ function submitForm() {
     });
 
     if (formValid) {
-        console.log('submit');
+        fetch(`http://x.chemeryskyi.ru/send.php`, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                role: form.querySelector('input[name="role"]:checked').value,
+                motivation: form.querySelector('input[name="motivation"]').value,
+                contact: form.querySelector('input[name="contact"]').value,
+            })
+        })
         popup.close();
         btn.disabled = false;
 
