@@ -28,17 +28,46 @@ function submitForm() {
         data.append('motivation', form.querySelector('textarea[name="motivation"]').value);
         data.append('contact', form.querySelector('input[name="contact"]').value);
         data.append('cv',form.querySelector('input[name="cv"]').files[0]);
+        let formResult = form.querySelector('.popup-line-btn'),
+            errorActions = () =>{
+                formResult.innerHTML = `<div class="popup-line-comment">Виникла помилка. Спробуйте ще!</div>`;
+                formResult.classList.add('error');
+                formResult.classList.add('active');
+                setTimeout(()=>{
+                    btn.disabled = false;
+                    formResult.classList.remove('active');
+                    formResult.classList.remove('good');
+                    formResult.classList.remove('error ');
+                }, 1000)
+            };
 
-        fetch(`/sntmail.php`, {
-            method: 'POST',
-            // mode: 'cors',
-            // headers: {
-            //     'Content-Type': 'application/json'
-            // },
-            body: data
-        })
-        popup.close();
-        btn.disabled = false;
+        try {
+            fetch(`/sntmail.php`, {
+                method: 'POST',
+                body: data
+            })
+                .then(data => data.text())
+                .then(data => {
+                    formResult.innerHTML = `<div class="popup-line-comment">Заявка успішно відправлена!</div>`;
+                    formResult.classList.add('active');
+                    formResult.classList.add('good');
+                    setTimeout(()=>{
+                        popup.close();
+                        btn.disabled = false;
+                        formResult.classList.remove('active');
+                        formResult.classList.remove('good');
+                        formResult.classList.remove('error ');
+                    }, 1000)
+
+                })
+                .catch(e => {
+                    errorActions();
+                })
+        } catch (e) {
+            errorActions();
+        }
+
+
 
     } else {
         btn.disabled = false;
