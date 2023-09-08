@@ -316,6 +316,9 @@ body {
   &--center {
     text-align: center;
   }
+  &--dark {
+    color: #262b2e;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -388,13 +391,17 @@ section .container {
 .section-bg {
   background: #fff url(/img/bg-light.png) center no-repeat;
   background-size: 100% 100%;
+  &-dark {
+    background: #262b2e url(/img/bg-dark.png) center no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+  }
+  &--fixed {
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+  }
 }
 
-.section-bg-dark {
-  background: #262b2e url(/img/bg-dark.png) center no-repeat;
-  background-size: 100% 100%;
-  color: #fff;
-}
 label.radio {
   padding-left: 25px;
   position: relative;
@@ -512,24 +519,23 @@ label.radio .radio-custom:before {
   padding-bottom: 62px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid #3C382C;
+  border-bottom: 1px solid #3c382c;
+  background: linear-gradient(to bottom, #274256, #fb1f03);
   &:before {
     content: "";
     inset: 0;
-    background: url("/images/fire-sky.png");
+    background: url("/images/burning-moscow-5.svg") right bottom no-repeat;
+    background-size: contain;
     position: absolute;
-    background-size: cover;
-    background-repeat: repeat-x;
+    bottom: -1px;
   }
   &:after {
     content: "";
     inset: 0;
-    background: url('/images/burning-moscow-5.svg')
-      right bottom no-repeat;
+    background: url("/images/burning-moscow-5-fire.svg") right bottom no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -1px;
-
   }
 
   .container {
@@ -2052,25 +2058,25 @@ label.radio .radio-custom:before {
     .media-item {
       display: block;
       font-size: 0;
-      width: calc(100%/7);
+      width: calc(100% / 7);
       padding: 0 15px;
-      @include mq(991){
-        width: calc(100%/5);
+      @include mq(991) {
+        width: calc(100% / 5);
       }
-      @include mq(576){
-        width: calc(100%/3);
+      @include mq(576) {
+        width: calc(100% / 3);
       }
 
-      img{
+      img {
         max-width: 100%;
         object-fit: contain;
-        transition: .3s linear;
+        transition: 0.3s linear;
       }
       &:hover {
         cursor: pointer;
 
-        @include mqMin(1200){
-          img{
+        @include mqMin(1200) {
+          img {
             transform: scale(1.1);
           }
         }
@@ -2078,8 +2084,6 @@ label.radio .radio-custom:before {
     }
   }
 }
-
-
 
 .support {
   position: relative;
@@ -2585,19 +2589,16 @@ label.radio .radio-custom:before {
     rgba(29, 207, 253, 0.3) 0,
     rgba(242, 213, 128, 0.3) 99.07%
   );
-  overflow: auto;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
+  transition: opacity 0.3s linear;
   transform: translateY(100vh);
   opacity: 0;
+  overflow: hidden;
+  &.active {
+    overflow: auto;
+  }
 }
 
 .popup.opened {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
 }
@@ -2652,6 +2653,11 @@ label.radio .radio-custom:before {
   z-index: 4;
   margin: auto;
   font-size: 18px;
+  transition: transform 0.3s linear;
+  transform: translateY(100vh);
+  &.active {
+    transform: translateY(0);
+  }
 }
 
 .popup-title {
@@ -2666,9 +2672,28 @@ label.radio .radio-custom:before {
     font-size: 18px;
   }
 }
-
+.popup-subtitle {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 24px;
+}
 .popup-line {
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  input {
+    &:placeholder-shown {
+      & ~ .popup-line-name {
+        font-size: 0;
+        opacity: 0;
+      }
+    }
+  }
+  &.error{
+    input{
+      border: 1px solid #ff3e41;
+    }
+  }
 }
 
 .popup-line-btn {
@@ -2694,6 +2719,9 @@ label.radio .radio-custom:before {
 .popup-line-name {
   font-size: 0.8em;
   margin-bottom: 8px;
+  order: -1;
+  transition: .3s linear;
+  opacity: 1;
 }
 
 .popup-line-comment {

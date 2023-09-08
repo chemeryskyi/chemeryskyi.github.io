@@ -125,12 +125,11 @@
     transition: 0.3s linear;
   }
 }
-.person{
+.person {
   padding: 60px 0;
   @include mq(768) {
     padding: 40px 0;
   }
-
 }
 .person-name {
   letter-spacing: 0.01em;
@@ -339,7 +338,7 @@
 }
 
 .results {
-  padding: 0 0 60px;
+  padding: 60px 0;
   text-align: center;
   &-title {
   }
@@ -385,7 +384,7 @@
     font-size: 72px;
     white-space: nowrap;
     font-weight: 700;
-    @include mq(768){
+    @include mq(768) {
       font-size: 54px;
     }
   }
@@ -402,8 +401,8 @@
     }
   }
 }
-.main-link{
-  &:hover{
+.main-link {
+  &:hover {
     cursor: pointer;
   }
 }
@@ -428,7 +427,6 @@
       @include mq(375) {
         font-size: 16px;
       }
-
     }
   }
   &-footer {
@@ -445,7 +443,7 @@
       display: flex;
       margin: 0 -15px;
       flex-wrap: wrap;
-      @include mq(991){
+      @include mq(991) {
         justify-content: center;
       }
     }
@@ -464,7 +462,7 @@
       font-size: 72px;
       white-space: nowrap;
       font-weight: 700;
-      @include mq(768){
+      @include mq(768) {
         font-size: 54px;
       }
     }
@@ -491,5 +489,38 @@
     &:before {
       opacity: 1;
     }
+  }
+}
+.armed-forces{
+  padding: 60px 0;
+  @include mq(991) {
+    text-align: center;
+  }
+  &__logos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  &__logo{
+    font-size: 0;
+    padding: 15px;
+    width: calc(100%/8);
+    @include mq(991){
+      padding: 5px;
+    }
+    @include mq(768){
+      width: calc(100%/6);
+    }
+    @include mq(576){
+      width: calc(100%/4);
+    }
+
+
+   img{
+     object-fit: contain;
+     max-width: 100%;
+   }
   }
 }
