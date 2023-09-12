@@ -533,6 +533,10 @@ label.radio .radio-custom:before {
     background-size: contain;
     position: absolute;
     bottom: -1px;
+    @include mq(1200){
+      background: url("/images/burning-moscow-5.svg") left bottom no-repeat;
+      background-size: auto;
+    }
   }
   &:after {
     content: "";
@@ -541,6 +545,10 @@ label.radio .radio-custom:before {
     background-size: contain;
     position: absolute;
     bottom: -1px;
+    @include mq(1200){
+      background: url("/images/burning-moscow-5-fire.svg") left bottom no-repeat;
+      background-size: auto;
+    }
   }
 
   .container {

@@ -517,7 +517,6 @@ function initSwiper() {
         },
       },
     });
-    console.log(swiper);
   });
 }
 
