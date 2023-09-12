@@ -346,6 +346,11 @@ body {
     font-size: 32px;
   }
 }
+@media only screen and (max-width: 576px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
 
 .list-square {
   max-width: 605px;
@@ -520,7 +525,7 @@ label.radio .radio-custom:before {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid #3c382c;
-  background: linear-gradient(to bottom, #274256, #fb1f03);
+  background: linear-gradient(to bottom, #274256 0%, #274256 60%, #fb1f03 100%);
   &:before {
     content: "";
     inset: 0;
@@ -1667,10 +1672,10 @@ label.radio .radio-custom:before {
 }
 
 .services-btn {
+  border-radius: 4px;
   background: #262b2e;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
   letter-spacing: -0.01em;
   font-size: 25px;
   text-transform: uppercase;
@@ -1721,16 +1726,10 @@ label.radio .radio-custom:before {
 .services-btn:before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: -o-linear-gradient(348.97deg, #6c834b 0, $supportColor 100%);
+  inset: 0;
   background: linear-gradient(101.03deg, #6c834b 0, $supportColor 100%);
-  border-radius: 3px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  border-radius: 4px;
+  transition: 0.3s ease;
   opacity: 0;
 }
 
@@ -2689,8 +2688,8 @@ label.radio .radio-custom:before {
       }
     }
   }
-  &.error{
-    input{
+  &.error {
+    input {
       border: 1px solid #ff3e41;
     }
   }
@@ -2720,7 +2719,7 @@ label.radio .radio-custom:before {
   font-size: 0.8em;
   margin-bottom: 8px;
   order: -1;
-  transition: .3s linear;
+  transition: 0.3s linear;
   opacity: 1;
 }
 

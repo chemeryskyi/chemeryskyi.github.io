@@ -10,8 +10,8 @@ function submitForm() {
       line = input.closest(".popup-line");
     if (input.type === "text") {
       inputValid = !!input.value.trim();
-    } else if (input.type ==='tel'){
-     inputValid = input.value.trim().replace(/\D/g, '').length === 12;
+    } else if (input.type === "tel") {
+      inputValid = input.value.trim().replace(/\D/g, "").length === 12;
     }
 
     if (line) {
@@ -39,9 +39,9 @@ function submitForm() {
           formResult.classList.remove("error ");
         }, 3e3);
       };
-    inputs.forEach(input => {
-      data.append(input.placeholder, input.value)
-    })
+    inputs.forEach((input) => {
+      data.append(input.placeholder, input.value);
+    });
     try {
       fetch(`/form-request.php`, {
         method: "POST",
@@ -61,7 +61,7 @@ function submitForm() {
             formResult.classList.remove("active");
             formResult.classList.remove("good");
             formResult.classList.remove("error");
-            popup.close()
+            popup.close();
           }, 3e3);
         })
         .catch((e) => {
@@ -106,7 +106,7 @@ const popup = {
     content.classList.remove("active");
     const closeTimer = setTimeout(() => {
       popupWrap.classList.remove("opened");
-      popupWrap.querySelector('form').reset()
+      popupWrap.querySelector("form").reset();
 
       clearTimeout(closeTimer);
     }, 300);
@@ -176,11 +176,11 @@ function buildMedia() {
       href: "https://www.radiosvoboda.org/a/viyna-mobilizatsiya-povistka-viyskkomat-voyiny/32541993.html",
       img: "radiosvoboda.png",
     },
-    {
-      name: "Знай UA",
-      href: "https://znaj.ua/society/463250-zapracyuvav-sayt-z-poshuku-roboti-v-zsu-hto-zaraz-konche-potriben-v-armiji",
-      img: "znaj.png",
-    },
+    // {
+    //   name: "Знай UA",
+    //   href: "https://znaj.ua/society/463250-zapracyuvav-sayt-z-poshuku-roboti-v-zsu-hto-zaraz-konche-potriben-v-armiji",
+    //   img: "znaj.png",
+    // },
     {
       name: "Цензор нет",
       href: "https://censor.net/ua/news/3433606/zapuscheno_sayit_iz_vakansiyamy_u_zsu",
@@ -239,16 +239,16 @@ function buildPersons() {
     {
       img: "Марина.jpg",
       name: (!IS_EN && "МАРИНА ПЕРЦОВИЧ") || "ГАННА МОРОЗОВА",
-      position: "Video Production Director",
+      position: "Project Manager",
       order: 8,
       link: "https://www.linkedin.com/in/марина-перцович-89b9881a9/",
     },
     {
       img: "Ганна.jpg",
       name: (!IS_EN && "ГАННА МОРОЗОВА") || "MARINA PERTSOVYCH",
-      position: "Project Manager",
+      position: "Video Production Director",
       order: 8,
-      // link: "https://www.linkedin.com/in/olgabandrivska",
+      link: "https://www.linkedin.com/in/гандзя-морозова-370602280",
     },
     {
       img: "Оля.jpg",
@@ -289,15 +289,14 @@ function buildPersons() {
     {
       img: "Анастасія.jpg",
       name: (!IS_EN && "Анастасія Руденко") || "Anastasiia Rudenko",
-      position:
-        (!IS_EN && "Редакторка соціальних мереж") || "Social Media Editor",
+      position: "Social Media Editor",
       order: 9,
       link: "https://www.linkedin.com/in/anastasiia-rudenko-x/",
     },
     {
       img: "Марія.jpg",
       name: (!IS_EN && "Марія Кісельова") || "Mariia Kiseliova",
-      position: (!IS_EN && "SMM Менеджерка") || "SMM Manager",
+      position: "SMM Manager",
       order: 10,
       link: "https://www.linkedin.com/in/masha-kiseliova-786030253/",
     },
@@ -346,6 +345,7 @@ function buildArmedGroups() {
     "101 бригада.png",
     "102 бригада.png",
     "104.png",
+    "105 прикордонний загін.png",
     "106-бригада-територіальної-оборони.png",
     "109 бригада.png",
     "111 бригада ТрО.png",
@@ -365,10 +365,10 @@ function buildArmedGroups() {
     "24 ОМБр.png",
     "24 прикордонний загін ДПСУ.png",
     "25 бригада імені Аскольда.png",
-    "25 прикордонний загін ДПСУ.jpeg",
+    "25 прикордонний загін ДПСУ.png",
     "28 бригада.png",
     "3 прикордонний загін.png",
-    "30_ОМБр.svg.png",
+    "30_ОМБр.png",
     "33-flag-patriot-ua-napys.png",
     "336886573_709502287636029_6145793320990341940_n-removebg-preview.png",
     "36 батальйон.png",
@@ -380,29 +380,30 @@ function buildArmedGroups() {
     "5 Слобожанська бригада.png",
     "516-бат-1ОБрСпП.png",
     "59th_Separate_Motorized_Infantry_Brigade_SSI_(with_tab).png",
+    "6 прикордонний загін.png",
     "67 ОМБр.png",
+    "7 прикорданний загін.png",
     "710 бригада.png",
     "72 ОМБр.png",
     "79 прикордонний загін ДПСУ.png",
+    "8 загін дпсу.png",
     "9 прикордонний загін.png",
     "92 окрема механізована бригада сухопутних військ України.png",
-    "AZOV_logo.svg.png",
-    "chevron.66361eb17c26a54f9a66.png",
-    "Emblem_of_the_Ministry_of_Defence_of_Ukraine.svg.png",
-    "Emblem_of_the_National_Guard_of_Ukraine.svg.png",
+    "AZOV_logo.png",
+    "chevron.png",
+    "Emblem_of_the_Ministry_of_Defence_of_Ukraine.png",
+    "Emblem_of_the_National_Guard_of_Ukraine.png",
     "image.png",
-    "IMG_0099.PNG",
-    "International_Legion_of_Territorial_Defense_of_Ukraine_emblem.svg.png",
+    "IMG_0099.png",
+    "International_Legion_of_Territorial_Defense_of_Ukraine_emblem.png",
     "I_5_storm_reg.png",
     "I_ngu_1brigade.png",
     "Kraken_logo.png",
-    "logoAFU_ua_left_white_brown-removebg-preview.png",
-    "logoLF_ua_left_white_green-removebg-preview.png",
-    "logoNF_ua_left_white_navy_копия-removebg-preview.png",
     "logo_black 242.png",
     "Акселератор МОУ.png",
     "військово-клінічний медичний центр.png",
-    "вовки.PNG",
+    "ВМС.png",
+    "вовки.png",
     "Головний центр підготовки особового складу ДПСУ.png",
     "Держспецзв_язку.png",
     "Дике поле.png",
@@ -411,6 +412,7 @@ function buildArmedGroups() {
     "ДССТ.png",
     "К-2.png",
     "Кіберсили.png",
+    "Кінологічний центр дпсу.png",
     "Командування медичних сил.png",
     "Нашивка_112_ої_окремої_бригади_територіальної_оборони_ЗСУ_місто.png",
     "Нашивка_116_ої_окремої_бригади_територіальної_оборони_ЗСУ_Полтавська.png",
@@ -418,14 +420,14 @@ function buildArmedGroups() {
     "Нашивка_Сил_територіальної_оборони_ЗСУ_svg.png",
     "Окремий контрольно-пропускний пункт «Київ».png",
     "оперативне командування північ.png",
-    "Офіс підтримки змін МОУ.jpeg",
+    "Офіс підтримки змін МОУ_без фону.png",
     "ОЧІ.png",
-    "повітряні сили.png",
+    "повітряні.png",
     "Регіональне управління тро захід.png",
     "Регіональне управління тро південь.png",
     "Регіональне управління тро Північ.png",
     "регіональне управління тро Схід.png",
-    "Сили Оборони.png",
+    "Сухопутні.png",
     "схід 20.png",
     "холодний яр_logo.png",
     "центрального управління військової освіти.png",
@@ -434,6 +436,7 @@ function buildArmedGroups() {
   const getImg = (fileName) => {
     const img = document.createElement("img");
     img.src = "/images/armed_logos/" + fileName;
+    img.loading = "lazy";
     img.alt = fileName.split(".").slice(0, -1).join(".");
     const container = document.createElement("div");
     container.classList.add("armed-forces__logo");
@@ -446,19 +449,84 @@ function buildArmedGroups() {
   section.innerHTML = `
     <div class="container">
         <h2 class="section-title section-title--center section-title--dark">ПІДРОЗДІЛИ, З ЯКИМИ МИ ПРАЦЮЄМО</h2>
-        <div class="armed-forces__logos">${files
-          .map((fileName) => getImg(fileName))
-          .join("")}</div>
+        <div class="armed-forces__swiper">
+          <div class="armed-forces__logos">   
+              ${files.map((fileName) => getImg(fileName)).join("")}
+          </div>
+          <div class="armed-forces__pagination"></div>
+        </div>
+       
     </div>
   `;
   beforeWrap.before(section);
 }
+function initSwiper() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper(".armed-forces__swiper", {
+      wrapperClass: "armed-forces__logos",
+      slideClass: "armed-forces__logo",
+      grid: {
+        rows: 3,
+      },
+      on: {
+        init(e) {
+          const slideSize = e.slidesSizesGrid.find((x) => x);
+          const rect = e.el.getBoundingClientRect();
+          e.slideTo(Math.ceil(rect.left / slideSize));
+        },
+      },
+
+      mousewheel: true,
+      pagination: {
+        el: ".armed-forces__pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      freeMode: {
+        enabled: true
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          grid: {
+            rows: 2,
+          },
+        },
+        480: {
+          slidesPerView: 4,
+          grid: {
+            rows: 2,
+          },
+        },
+        576: {
+          grid: {
+            rows: 3,
+          },
+        },
+        640: {
+          slidesPerView: 6,
+          grid: {
+            rows: 3,
+          },
+        },
+        991: {
+          slidesPerView: 8,
+          grid: {
+            rows: 3,
+          },
+        },
+      },
+    });
+    console.log(swiper);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  // buildArmedGroups();
+  buildArmedGroups();
   buildPersons();
   $('[type="tel"]').inputmask({
-    mask: '+38 (999) 999-99-99', // Формат маски для номеру телефону
-    placeholder: '_', // Опціонально, символ, який буде відображатися як заповнювач
+    mask: "+38 (999) 999-99-99", // Формат маски для номеру телефону
+    placeholder: "_", // Опціонально, символ, який буде відображатися як заповнювач
     showMaskOnHover: false, // Опціонально, вибір, коли відображати маску
   });
 });

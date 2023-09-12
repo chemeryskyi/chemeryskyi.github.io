@@ -243,14 +243,17 @@
           cursor: pointer;
           min-width: 440px;
           justify-content: center;
+          background: #ffffff;
+          color: #262b2e;
+          &:hover {
+            color: #fff;
+            background: transparent;
+          }
           @include mq(991) {
             min-width: auto;
           }
           @include mq(480) {
             width: 280px;
-          }
-          &:before {
-            opacity: 1;
           }
         }
       }
@@ -486,41 +489,65 @@
     cursor: pointer;
     min-width: 440px;
     justify-content: center;
-    &:before {
-      opacity: 1;
+    background: #ffffff;
+    color: #262b2e;
+    &:hover {
+      color: #fff;
+      background: #262b2e;
+    }
+    @include mq(991) {
+      min-width: auto;
+    }
+    @include mq(480) {
+      width: 280px;
     }
   }
 }
-.armed-forces{
+.armed-forces {
   padding: 60px 0;
+
   @include mq(991) {
     text-align: center;
   }
-  &__logos{
+  &__swiper {
+    margin-top: 32px;
+  }
+  &__logos {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     margin-left: -5px;
     margin-right: -5px;
   }
-  &__logo{
+  &__pagination{
+    margin: 32px auto 0;
+    .swiper-pagination-bullet-active{
+      background: $mainColor;
+    }
+  }
+  &__logo {
     font-size: 0;
     padding: 15px;
-    width: calc(100%/8);
-    @include mq(991){
+    height: 150px;
+    width: calc(100% / 8);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(991) {
       padding: 5px;
     }
-    @include mq(768){
-      width: calc(100%/6);
+    @include mq(768) {
+      width: calc(100% / 6);
     }
-    @include mq(576){
-      width: calc(100%/4);
+    @include mq(576) {
+      width: calc(100% / 4);
     }
 
-
-   img{
-     object-fit: contain;
-     max-width: 100%;
-   }
+    img {
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }
