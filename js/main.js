@@ -1,13 +1,13 @@
 function submitForm() {
   event.preventDefault();
   let formValid = true,
-    form = event.target.closest("form"),
-    btn = form.querySelector("button"),
-    inputs = form.querySelectorAll("input,textarea");
+      form = event.target.closest("form"),
+      btn = form.querySelector("button"),
+      inputs = form.querySelectorAll("input,textarea");
   btn.disabled = true;
   inputs.forEach((input) => {
     let inputValid = true,
-      line = input.closest(".popup-line");
+        line = input.closest(".popup-line");
     if (input.type === "text") {
       inputValid = !!input.value.trim();
     } else if (input.type === "tel") {
@@ -22,23 +22,23 @@ function submitForm() {
 
   if (formValid) {
     const data = new FormData(),
-      isEng = location.pathname.indexOf("en") !== -1;
+        isEng = location.pathname.indexOf("en") !== -1;
     let formResult = form.querySelector(".popup-line-btn"),
-      errorActions = () => {
-        formResult.innerHTML = `<div class="popup-line-comment">${
-          isEng
-            ? `An error has occurred. Try again!`
-            : `Виникла помилка. Спробуйте ще!`
-        }</div>`;
-        formResult.classList.add("error");
-        formResult.classList.add("active");
-        setTimeout(() => {
-          btn.disabled = false;
-          formResult.classList.remove("active");
-          formResult.classList.remove("good");
-          formResult.classList.remove("error ");
-        }, 3e3);
-      };
+        errorActions = () => {
+          formResult.innerHTML = `<div class="popup-line-comment">${
+              isEng
+                  ? `An error has occurred. Try again!`
+                  : `Виникла помилка. Спробуйте ще!`
+          }</div>`;
+          formResult.classList.add("error");
+          formResult.classList.add("active");
+          setTimeout(() => {
+            btn.disabled = false;
+            formResult.classList.remove("active");
+            formResult.classList.remove("good");
+            formResult.classList.remove("error ");
+          }, 3e3);
+        };
     inputs.forEach((input) => {
       data.append(input.placeholder, input.value);
     });
@@ -47,26 +47,26 @@ function submitForm() {
         method: "POST",
         body: data,
       })
-        .then((data) => data.text())
-        .then((data) => {
-          formResult.innerHTML = `<div class="popup-line-comment">${
-            isEng
-              ? `The application has been successfully submitted!`
-              : `Заявка успішно відправлена!`
-          }</div>`;
-          formResult.classList.add("active");
-          formResult.classList.add("good");
-          setTimeout(() => {
-            btn.disabled = false;
-            formResult.classList.remove("active");
-            formResult.classList.remove("good");
-            formResult.classList.remove("error");
-            popup.close();
-          }, 3e3);
-        })
-        .catch((e) => {
-          errorActions();
-        });
+          .then((data) => data.text())
+          .then((data) => {
+            formResult.innerHTML = `<div class="popup-line-comment">${
+                isEng
+                    ? `The application has been successfully submitted!`
+                    : `Заявка успішно відправлена!`
+            }</div>`;
+            formResult.classList.add("active");
+            formResult.classList.add("good");
+            setTimeout(() => {
+              btn.disabled = false;
+              formResult.classList.remove("active");
+              formResult.classList.remove("good");
+              formResult.classList.remove("error");
+              popup.close();
+            }, 3e3);
+          })
+          .catch((e) => {
+            errorActions();
+          });
     } catch (e) {
       errorActions();
     }
@@ -78,10 +78,10 @@ function submitForm() {
 
 function fileChange() {
   let input = event.target,
-    name = event.target.files[0].name,
-    line = input.closest(".popup-line"),
-    isEng = location.pathname.indexOf("en") !== -1,
-    prevName = line.querySelector(".popup-line-comment");
+      name = event.target.files[0].name,
+      line = input.closest(".popup-line"),
+      isEng = location.pathname.indexOf("en") !== -1,
+      prevName = line.querySelector(".popup-line-comment");
   prevName.innerHTML += `${isEng ? `Uploaded` : `Завантажено`}: ${name}`;
   prevName.style.display = "block";
 }
@@ -302,16 +302,16 @@ function buildPersons() {
     },
   ];
   wrap.innerHTML =
-    PERSONS.slice()
-      .sort((a, b) => a.order - b.order)
-      .map(
-        (person) =>
-          `
+      PERSONS.slice()
+          .sort((a, b) => a.order - b.order)
+          .map(
+              (person) =>
+                  `
                 <${
-                  person.link
-                    ? 'a href="' + person.link + '" target="_blank"'
-                    : "div"
-                } class="person-col col-1">
+                      person.link
+                          ? 'a href="' + person.link + '" target="_blank"'
+                          : "div"
+                  } class="person-col col-1">
 					<div class="person-item">
 						<div class="person-img ${(person.scaleImg && "person-img--scaled") || ""}">
 						    <img src="/img/persons/${person.img}" alt="${person.name}">
@@ -324,11 +324,11 @@ function buildPersons() {
 					</div>
 				</${person.link ? "a" : "div"}>
             `,
-      )
-      .join("") +
-    (HIDE_COMMAND_BTN
-      ? ""
-      : `
+          )
+          .join("") +
+      (HIDE_COMMAND_BTN
+          ? ""
+          : `
 			<div class="person-col col-2">
 				<div class="person-btn" onclick="popup.open()">
 				    <span>
@@ -521,7 +521,7 @@ function initSwiper() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  buildArmedGroups();
+  // buildArmedGroups();
   buildPersons();
   $('[type="tel"]').inputmask({
     mask: "+38 (999) 999-99-99", // Формат маски для номеру телефону
