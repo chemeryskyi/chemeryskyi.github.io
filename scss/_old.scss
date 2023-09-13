@@ -1,186 +1,143 @@
-@charset "UTF-8";
-@mixin mq($width) {
-  @media only screen and (max-width: $width + px) {
-    @content;
-  }
-}
-@mixin mqMin($width) {
-  @media only screen and (min-width: $width + px) {
-    @content;
-  }
-}
-
-$mainColor: #6c834b;
-
-$supportColor: darken($mainColor, 20%);
-
+@charset "UTF-8"; /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
 }
 
 body {
-  margin: 0;
+  margin: 0
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
+article, aside, footer, header, nav, section {
+  display: block
 }
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0
 }
 
-figcaption,
-figure,
-main {
-  display: block;
+figcaption, figure, main {
+  display: block
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 1em 40px
 }
 
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
-  overflow: visible;
+  overflow: visible
 }
 
 pre {
   font-family: monospace, monospace;
-  font-size: 1em;
+  font-size: 1em
 }
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
+  -webkit-text-decoration-skip: objects
 }
 
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+  text-decoration: underline dotted
 }
 
-b,
-strong {
-  font-weight: inherit;
+b, strong {
+  font-weight: inherit
 }
 
-b,
-strong {
-  font-weight: bolder;
+b, strong {
+  font-weight: bolder
 }
 
-code,
-kbd,
-samp {
+code, kbd, samp {
   font-family: monospace, monospace;
-  font-size: 1em;
+  font-size: 1em
 }
 
 dfn {
-  font-style: italic;
+  font-style: italic
 }
 
 mark {
   background-color: #ff0;
-  color: #000;
+  color: #000
 }
 
 small {
-  font-size: 80%;
+  font-size: 80%
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
+  vertical-align: baseline
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em
 }
 
-audio,
-video {
-  display: inline-block;
+audio, video {
+  display: inline-block
 }
 
 audio:not([controls]) {
   display: none;
-  height: 0;
+  height: 0
 }
 
 img {
-  border-style: none;
+  border-style: none
 }
 
 svg:not(:root) {
-  overflow: hidden;
+  overflow: hidden
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
+  margin: 0
 }
 
-button,
-input {
-  overflow: visible;
+button, input {
+  overflow: visible
 }
 
-button,
-select {
-  text-transform: none;
+button, select {
+  text-transform: none
 }
 
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: button
 }
 
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
   border-style: none;
-  padding: 0;
+  padding: 0
 }
 
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+  outline: 1px dotted ButtonText
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: .35em .75em .625em
 }
 
 legend {
@@ -190,76 +147,136 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal;
+  white-space: normal
 }
 
 progress {
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: baseline
 }
 
 textarea {
-  overflow: auto;
+  overflow: auto
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox], [type=radio] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto
 }
 
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px;
+  outline-offset: -2px
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
 }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit;
+  font: inherit
 }
 
-details,
-menu {
-  display: block;
+details, menu {
+  display: block
 }
 
 summary {
-  display: list-item;
+  display: list-item
 }
 
 canvas {
-  display: inline-block;
+  display: inline-block
 }
 
 template {
-  display: none;
+  display: none
 }
 
 [hidden] {
-  display: none;
+  display: none
+}
+
+@font-face {
+  font-family: icomoon;
+  src: url(/fonts/icomoon.eot?123123);
+  src: url(/fonts/icomoon.eot?123123#iefix) format("embedded-opentype"), url(/fonts/icomoon.ttf?123123) format("truetype"), url(/fonts/icomoon.woff?123123) format("woff"), url(/fonts/icomoon.svg?123123#icomoon) format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before {
+  font-family: icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.icon-facebook:before {
+  content: "\e900"
+}
+
+.icon-instagram:before {
+  content: "\e901"
+}
+
+.icon-linkedin:before {
+  content: "\e902"
+}
+
+.icon-mail:before {
+  content: "\e903"
+}
+
+.icon-phone:before {
+  content: "\e904"
+}
+
+.icon-plus:before {
+  content: "\e905"
+}
+
+.icon-telegram:before {
+  content: "\e906"
+}
+
+.icon-twitter:before {
+  content: "\e907"
+}
+
+.icon-arrow-down:before {
+  content: "\e908"
+}
+
+.icon-placeholder:before {
+  content: "\e909"
+}
+.icon-patreon:before {
+  content: "\e90a";
 }
 
 .container {
   padding: 0 15px;
   max-width: 1300px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 @media only screen and (max-width: 1300px) {
   .container {
-    max-width: 1170px;
+    max-width: 1170px
   }
 }
 
@@ -267,158 +284,142 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  outline: 0 !important;
+  outline: 0 !important
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0
 }
 
 section {
   max-width: 100vw;
-  overflow: hidden;
+  overflow: hidden
 }
 
 p {
-  margin: 0;
+  margin: 0
 }
 
 ul {
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style: none
 }
+
 body {
   font-family: Roboto, sans-serif;
-  color: #262b2e;
-  line-height: 1.16;
+  color: #151515;
+  line-height: 1.16
 }
 
 .main-color {
-  text-decoration: none;
-  color: #6c834b;
+  color: #1dcffd
 }
 
 .block {
-  display: block;
+  display: block
 }
 
 .section-title {
   font-size: 69px;
   line-height: 1.3;
   text-transform: uppercase;
-  font-weight: 700;
-  &--center {
-    text-align: center;
-  }
-  &--dark {
-    color: #262b2e;
-  }
+  font-weight: 700
 }
 
 @media only screen and (max-width: 1300px) {
   .section-title {
-    font-size: 62px;
+    font-size: 65px;
+    font-size: 62px
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .section-title {
     font-size: 55px;
-    font-size: 52px;
+    font-size: 52px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .section-title {
+    font-size: 45px;
     font-size: 42px;
-    text-align: center;
+    text-align: center
   }
 }
 
 @media only screen and (max-width: 768px) {
   .section-title {
-    font-size: 32px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .section-title {
-    font-size: 24px;
+    font-size: 35px;
+    font-size: 32px
   }
 }
 
 .list-square {
-  max-width: 605px;
+  max-width: 605px
 }
 
 .list-square li {
   font-size: 25px;
   position: relative;
-  padding-left: 1.64em;
+  padding-left: 1.64em
 }
 
 .list-square li:before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: 2px;
-  width: 0.92em;
-  height: 0.92em;
-  background: #6c834b;
+  width: .92em;
+  height: .92em;
+  background: #1dcffd
 }
 
 .list-square li:not(:last-child) {
-  margin-bottom: 1.16em;
+  margin-bottom: 1.16em
 }
 
 @media only screen and (max-width: 1200px) {
   .list-square li {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .list-square li {
-    font-size: 14px;
+    font-size: 14px
   }
 }
 
 section .container {
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .section-bg {
   background: #fff url(/img/bg-light.png) center no-repeat;
+  background-size: 100% 100%
+}
+
+.section-bg-dark {
+  background: #151515 url(/img/bg-dark.png) center no-repeat;
   background-size: 100% 100%;
-  &-dark {
-    background: #262b2e url(/img/bg-dark.png) center no-repeat;
-    background-size: 100% 100%;
-    color: #fff;
-  }
-  &--fixed {
-    background-attachment: fixed;
-    background-size: 100% 100vh;
-  }
+  color: #fff
 }
 
 label.radio {
   padding-left: 25px;
   position: relative;
-  font-size: 18px;
+  font-size: 18px
 }
 
 label.radio input {
-  display: none;
+  display: none
 }
 
 label.radio input:checked ~ .radio-custom:before {
-  opacity: 1;
+  opacity: 1
 }
 
 label.radio .radio-custom {
@@ -428,39 +429,39 @@ label.radio .radio-custom {
   width: 18px;
   border-radius: 50%;
   height: 18px;
-  border: 1px solid #6c834b;
+  border: 1px solid #1dcffd;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
 
 label.radio .radio-custom:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 2px;
   left: 2px;
   bottom: 2px;
   right: 2px;
-  background: #6c834b;
+  background: #1dcffd;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .dib {
-  display: inline-block;
+  display: inline-block
 }
 
 .db {
-  display: block;
+  display: block
 }
 
 .social {
   padding: 21px 34px;
-  background: -o-linear-gradient(176.96deg, $supportColor 1.68%, #6c834b 100%);
-  background: linear-gradient(273.04deg, $supportColor 1.68%, #6c834b 100%);
+  background: -o-linear-gradient(176.96deg, #f2d580 1.68%, #1dcffd 100%);
+  background: linear-gradient(273.04deg, #f2d580 1.68%, #1dcffd 100%);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -468,7 +469,7 @@ label.radio .radio-custom:before {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 .social a {
@@ -476,85 +477,54 @@ label.radio .radio-custom:before {
   text-decoration: none;
   line-height: 1;
   font-size: 29px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 @media only screen and (max-width: 768px) {
   .social a {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 .social a:hover {
   cursor: pointer;
   color: #f2f2f2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
 }
 
 .social a.small-icon {
-  font-size: 28px;
+  font-size: 28px
 }
 
 @media only screen and (max-width: 768px) {
   .social a.small-icon {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 .social a:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 25px
 }
 
 @media only screen and (max-width: 768px) {
   .social {
-    padding: 15px 20px;
+    padding: 15px 20px
   }
 }
 
 @media only screen and (max-width: 480px) {
   .social {
-    margin-left: -15px;
+    margin-left: -15px
   }
 }
 
 .main {
+  background: #151515 url(/img/main-bg-x.svg) right center no-repeat;
+  background-size: contain;
   color: #fff;
-  padding-bottom: 62px;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid #3c382c;
-  background: linear-gradient(to bottom, #274256 0%, #274256 60%, #fb1f03 100%);
-  &:before {
-    content: "";
-    inset: 0;
-    background: url("/images/burning-moscow-5.svg") right bottom no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: -1px;
-    @include mq(1200){
-      background: url("/images/burning-moscow-5.svg") left bottom no-repeat;
-      background-size: auto;
-    }
-  }
-  &:after {
-    content: "";
-    inset: 0;
-    background: url("/images/burning-moscow-5-fire.svg") right bottom no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: -1px;
-    @include mq(1200){
-      background: url("/images/burning-moscow-5-fire.svg") left bottom no-repeat;
-      background-size: auto;
-    }
-  }
-
-  .container {
-    position: relative;
-    z-index: 1;
-  }
+  padding-bottom: 62px
 }
 
 .main-header {
@@ -570,100 +540,48 @@ label.radio .radio-custom:before {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  @include mq(768) {
-    flex-wrap: wrap;
-    .main-social {
-      max-width: 280px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 16px;
-    }
-  }
-  .header-actions {
-    @include mq(768) {
-      width: 100%;
-      max-width: 280px;
-      margin-left: auto;
-      margin-bottom: 16px;
-      margin-right: auto;
-    }
-    &__btn {
-      color: #000000;
-      text-decoration: none;
-      font-size: 0.9em;
-      text-transform: uppercase;
-      padding: 10px 20px 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      background: white;
-      transition: all 0.3s;
-      display: block;
-      &:hover {
-        background: #6c834b;
-        color: white;
-        transition: all 0.3s;
-      }
-      @include mq(768) {
-        width: 100%;
-      }
-    }
-  }
+  align-items: center
 }
 
 @media only screen and (max-width: 991px) {
   .main-header {
-    margin-bottom: 100px;
+    margin-bottom: 100px
   }
 }
 
 @media only screen and (max-width: 576px) {
   .main-header {
     padding: 15px 0;
-    margin-bottom: 90px;
+    margin-bottom: 90px
   }
 }
 
 @media only screen and (max-width: 576px) {
   .main-social {
-    display: none;
+    display: none
   }
 }
 
 .main-logo {
   margin-bottom: 32px;
   max-width: 80%;
-  width: 583px;
+  width: 583px
 }
 
 @media only screen and (max-width: 991px) {
   .main-logo {
     max-width: 70%;
-    margin-bottom: 20px;
+    margin-bottom: 20px
   }
 }
 
 .main-title {
   font-size: 30px;
   line-height: 1.3;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   margin-bottom: 130px;
   font-weight: 400;
-  text-transform: uppercase;
-  a {
-    display: block;
-    font-size: 0;
-    img {
-      transition: 0.3s linear;
-    }
-    svg {
-      max-width: 100%;
-      transition: 0.3s linear;
-      fill: #fff;
-    }
-    &:hover {
-    }
-  }
+  text-transform: uppercase
 }
 
 @media only screen and (max-width: 1200px) {
@@ -675,31 +593,25 @@ label.radio .radio-custom:before {
 @media only screen and (max-width: 991px) {
   .main-title {
     font-size: 22px;
-    margin-bottom: 70px;
+    margin-bottom: 70px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .main-title {
-    font-size: 16px;
+    font-size: 16px
   }
 }
 
 .main-arrow {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from($supportColor),
-    to(#6c834b)
-  );
-  background: -o-linear-gradient(top, $supportColor 0, #6c834b 100%);
-  background: linear-gradient(180deg, $supportColor 0, #6c834b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2d580), to(#1dcffd));
+  background: -o-linear-gradient(top, #f2d580 0, #1dcffd 100%);
+  background: linear-gradient(180deg, #f2d580 0, #1dcffd 100%);
   display: block;
   width: 28px;
   height: 62px;
   text-decoration: none;
-  position: relative;
+  position: relative
 }
 
 .main-arrow:before {
@@ -709,19 +621,19 @@ label.radio .radio-custom:before {
   font-size: 72px;
   top: 26px;
   text-align: center;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .main-arrow:hover:before {
-  top: 30px;
+  top: 30px
 }
 
 .about {
   padding: 60px 0;
 
-  position: relative;
+  position: relative
 }
 
 @media only screen and (max-width: 1200px) {
@@ -732,7 +644,7 @@ label.radio .radio-custom:before {
 
 @media only screen and (max-width: 991px) {
   .about {
-    font-size: 22px;
+    font-size: 22px
   }
 }
 
@@ -755,72 +667,72 @@ label.radio .radio-custom:before {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .about-bg img {
   max-width: 55%;
   position: relative;
-  top: 1px;
+  top: 1px
 }
 
 @media only screen and (max-width: 991px) {
   .about-bg img {
-    max-height: 200px;
+    max-height: 200px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about-bg img {
     max-width: 100%;
-    opacity: 0.3;
+    opacity: .3
   }
 }
 
 .about-title {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .about-subtitle {
   font-size: 30px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
-  margin-bottom: 91px;
+  margin-bottom: 91px
 }
 
 @media only screen and (max-width: 1200px) {
   .about-subtitle {
     font-size: 24px;
-    margin-bottom: 75px;
+    margin-bottom: 75px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .about-subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 40px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about-subtitle {
     font-size: 20px;
-    text-align: center;
+    text-align: center
   }
   .about-subtitle b {
-    display: inline-block;
+    display: inline-block
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about-subtitle {
-    font-size: 17px;
+    font-size: 17px
   }
 }
 
 .mission {
   padding: 83px 0;
   position: relative;
-  color: #fff;
+  color: #fff
 }
 
 @media only screen and (max-width: 1200px) {
@@ -838,6 +750,7 @@ label.radio .radio-custom:before {
 .mission-title {
   margin-bottom: 10px;
 }
+
 
 .mission-bg {
   font-size: 0;
@@ -858,50 +771,50 @@ label.radio .radio-custom:before {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .mission-bg img {
   max-width: 55%;
   position: relative;
   top: 1px;
-  right: -40px;
+  right: -40px
 }
 
 @media only screen and (max-width: 1200px) {
   .mission-bg img {
-    max-height: 300px;
+    max-height: 300px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .mission-bg img {
-    max-height: 180px;
+    max-height: 180px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .mission-bg img {
     max-width: 80%;
-    opacity: 0.3;
-    max-height: none;
+    opacity: .3;
+    max-height: none
   }
 }
 
 .advantages {
   padding: 83px 0;
-  position: relative;
+  position: relative
 }
 
 @media only screen and (max-width: 1200px) {
   .advantages {
-    padding: 60px 0;
+    padding: 60px 0
   }
 }
 
 @media only screen and (max-width: 991px) {
   .advantages {
-    padding: 60px 0 80px;
+    padding: 60px 0 80px
   }
 }
 
@@ -924,7 +837,7 @@ label.radio .radio-custom:before {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .advantages-bg img {
@@ -936,7 +849,7 @@ label.radio .radio-custom:before {
 
 @media only screen and (max-width: 991px) {
   .advantages-bg img {
-    max-height: 60px;
+    max-height: 60px
   }
 }
 
@@ -944,7 +857,7 @@ label.radio .radio-custom:before {
   .advantages-bg img {
     max-width: 100%;
     max-height: none;
-    opacity: 0.3;
+    opacity: .3
   }
 }
 
@@ -953,52 +866,52 @@ label.radio .radio-custom:before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -25px;
+  margin: 0 -25px
 }
 
 @media only screen and (max-width: 991px) {
   .advantages-row {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
   }
 }
 
 .advantages-col {
   padding: 0 25px;
-  width: 50%;
+  width: 50%
 }
 
 @media only screen and (max-width: 991px) {
   .advantages-col {
-    width: 100%;
+    width: 100%
   }
   .advantages-col:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 35px
   }
 }
 
 .advantages-title {
-  margin-bottom: 77px;
+  margin-bottom: 77px
 }
 
 @media only screen and (max-width: 1200px) {
   .advantages-title {
-    margin-bottom: 55px;
+    margin-bottom: 55px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .advantages-title {
-    margin-bottom: 25px;
+    margin-bottom: 25px
   }
   .advantages-title br {
-    display: none;
+    display: none
   }
 }
 
 .partners {
-  padding: 55px 0 36px;
+  padding: 55px 0 36px
 }
 
 .partners-row {
@@ -1009,14 +922,14 @@ label.radio .radio-custom:before {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 @media only screen and (max-width: 1200px) {
   .partners-row {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
   }
 }
 
@@ -1033,7 +946,7 @@ label.radio .radio-custom:before {
     align-items: center;
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: space-around
   }
 }
 
@@ -1048,42 +961,42 @@ label.radio .radio-custom:before {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
 }
 
 .partners-title {
-  margin-bottom: 19px;
+  margin-bottom: 19px
 }
 
 .partners-count {
   font-weight: 900;
   font-size: 200px;
   line-height: 1.3;
-  color: $supportColor;
-  text-transform: uppercase;
+  color: #f2d580;
+  text-transform: uppercase
 }
 
 @media only screen and (max-width: 768px) {
   .partners-count {
-    font-size: 150px;
+    font-size: 150px
   }
 }
 
 .partners-count .block {
-  display: block;
+  display: block
 }
 
 .partners-count .text {
   font-size: 25px;
   margin-top: -38px;
   margin-bottom: 32px;
-  color: #fff;
+  color: #fff
 }
 
 @media only screen and (max-width: 576px) {
   .partners-count .text {
-    text-align: center;
+    text-align: center
   }
 }
 
@@ -1106,32 +1019,32 @@ label.radio .radio-custom:before {
   font-size: 0;
   max-width: 670px;
   margin-left: auto;
-  right: -25px;
+  right: -25px
 }
 
 .partners-list img {
-  margin: 15px;
+  margin: 15px
 }
 
 .partners-list img.no-mr-ml {
-  margin: 15px 0;
+  margin: 15px 0
 }
 
 @media only screen and (max-width: 1200px) {
   .partners-list img {
-    margin: 10px;
+    margin: 10px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .partners-list img {
-    max-width: 30% !important;
+    max-width: 30% !important
   }
 }
 
 @media only screen and (max-width: 576px) {
   .partners-list img {
-    max-width: 24% !important;
+    max-width: 24% !important
   }
 }
 
@@ -1142,16 +1055,17 @@ label.radio .radio-custom:before {
     right: 0;
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: space-around
   }
 }
 
 .statistics {
   padding-top: 67px;
-  &-title {
+  &-title{
     margin-bottom: 24px;
   }
 }
+
 
 .statistics-header {
   display: -webkit-box;
@@ -1161,7 +1075,7 @@ label.radio .radio-custom:before {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1172,7 +1086,7 @@ label.radio .radio-custom:before {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center
   }
 }
 
@@ -1185,77 +1099,77 @@ label.radio .radio-custom:before {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
-  left: 65px;
+  left: 65px
 }
 
 .statistics-counts .count-item.first-row {
-  margin-bottom: 18px;
+  margin-bottom: 18px
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-counts .count-item {
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 18px
   }
 }
 
 .statistics-counts .count-small {
-  width: 400px;
+  width: 400px
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-counts .count-small {
-    width: 340px;
+    width: 340px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-counts .count-small {
-    width: 220px;
+    width: 220px
   }
 }
 
 @media only screen and (max-width: 510px) {
   .statistics-counts .count-small {
-    width: 140px;
+    width: 140px
   }
 }
 
 .statistics-counts .count-value {
   font-size: 140px;
-  color: $mainColor;
+  color: #f2d580;
   font-weight: 900;
-  line-height: 0.95;
-  text-align: left;
+  line-height: .95;
+  text-align: left
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-counts .count-value {
-    font-size: 110px;
+    font-size: 110px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .statistics-counts .count-value {
-    font-size: 100px;
+    font-size: 100px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-counts .count-value {
-    font-size: 70px;
+    font-size: 70px
   }
 }
 
 @media only screen and (max-width: 510px) {
   .statistics-counts .count-value {
-    font-size: 50px;
+    font-size: 50px
   }
 }
 
 @media only screen and (max-width: 450px) {
   .statistics-counts .count-value {
-    font-size: 40px;
+    font-size: 40px
   }
 }
 
@@ -1263,40 +1177,40 @@ label.radio .radio-custom:before {
   font-size: 30px;
   padding-left: 5px;
   color: #2a3238;
-  text-align: left;
+  text-align: left
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-counts .count-text {
-    font-size: 24px;
+    font-size: 24px
   }
 }
 
 @media only screen and (max-width: 991px) {
   .statistics-counts .count-text {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-counts .count-text {
-    font-size: 18px;
+    font-size: 18px
   }
 }
 
 @media only screen and (max-width: 510px) {
   .statistics-counts .count-text {
-    font-size: 12px;
+    font-size: 12px
   }
 }
 
 .statistics-counts .count-text.max-p {
-  padding-left: 10px;
+  padding-left: 10px
 }
 
 @media only screen and (max-width: 510px) {
   .statistics-counts .count-text.max-p {
-    padding: 0;
+    padding: 0
   }
 }
 
@@ -1308,86 +1222,74 @@ label.radio .radio-custom:before {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 800px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-counts {
-    max-width: 600px;
+    max-width: 600px
   }
 }
 
 @media only screen and (max-width: 510px) {
   .statistics-counts {
-    max-width: 400px;
+    max-width: 400px
   }
 }
 
 .statistics-year {
-  text-align: center;
+  text-align: center
 }
 
 .statistics-year-count {
   font-size: 450px;
   font-weight: 900;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#35d0ef),
-    to($supportColor)
-  );
-  background: -o-linear-gradient(top, #35d0ef, $supportColor);
-  background: linear-gradient(to bottom, #35d0ef, $supportColor);
+  background: -webkit-gradient(linear, left top, left bottom, from(#35d0ef), to(#f2d580));
+  background: -o-linear-gradient(top, #35d0ef, #f2d580);
+  background: linear-gradient(to bottom, #35d0ef, #f2d580);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 0.7;
+  line-height: .7
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-year-count {
-    font-size: 380px;
+    font-size: 380px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-year-count {
-    font-size: 250px;
+    font-size: 250px
   }
 }
 
 .statistics-year-label {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#35d0ef),
-    to($supportColor)
-  );
-  background: -o-linear-gradient(left, #35d0ef, $supportColor);
-  background: linear-gradient(to right, #35d0ef, $supportColor);
+  background: -webkit-gradient(linear, left top, right top, from(#35d0ef), to(#f2d580));
+  background: -o-linear-gradient(left, #35d0ef, #f2d580);
+  background: linear-gradient(to right, #35d0ef, #f2d580);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 40px;
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-year-label {
-    font-size: 35px;
+    font-size: 35px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-year-label {
-    font-size: 25px;
+    font-size: 25px
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .statistics-year {
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
 }
 
@@ -1408,22 +1310,22 @@ label.radio .radio-custom:before {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 75px 0 46px;
+  padding: 75px 0 46px
 }
 
 @media only screen and (max-width: 768px) {
   .statistics-list {
-    padding-top: 30px;
+    padding-top: 30px
   }
 }
 
 .statistics-list img {
-  margin: 5px 15px;
+  margin: 5px 15px
 }
 
 @media only screen and (max-width: 1300px) {
   .statistics-list img {
-    margin: 5px 8px;
+    margin: 5px 8px
   }
 }
 
@@ -1431,7 +1333,7 @@ label.radio .radio-custom:before {
   .statistics-list img {
     margin: 5px;
     max-width: -webkit-calc(33.3333% - 10px);
-    max-width: calc(33.3333% - 10px);
+    max-width: calc(33.3333% - 10px)
   }
 }
 
@@ -1439,21 +1341,21 @@ label.radio .radio-custom:before {
   .statistics-list {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: space-around
   }
 }
 
 .services {
-  padding: 10px 0 42px;
+  padding: 10px 0 42px
 }
 
 .services-title {
-  margin-bottom: 11px;
+  margin-bottom: 11px
 }
 
 @media only screen and (max-width: 991px) {
   .services-title {
-    margin-bottom: 25px;
+    margin-bottom: 25px
   }
 }
 
@@ -1465,179 +1367,175 @@ label.radio .radio-custom:before {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 -12px;
+  margin: 0 -12px
 }
 
 @media only screen and (max-width: 768px) {
   .services-row {
-    margin: 0;
+    margin: 0
   }
 }
 
 .services-item {
   display: block;
   text-decoration: none;
-  color: #262b2e;
+  color: #151515;
   padding: 21px 45px;
   background: #fff;
-  border: 1px solid #6c834b;
+  border: 1px solid #1dcffd;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: 0 4px 4px rgba(46, 45, 45, 0.05);
-  box-shadow: 0 4px 4px rgba(46, 45, 45, 0.05);
+  -webkit-box-shadow: 0 4px 4px rgba(46, 45, 45, .05);
+  box-shadow: 0 4px 4px rgba(46, 45, 45, .05);
   border-radius: 5px;
   margin: 0 12px 44px;
   width: -webkit-calc(50% - 24px);
   width: calc(50% - 24px);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   min-height: 268px;
   position: relative;
   overflow: hidden;
-  &-link {
-    color: #6c834b;
+  &-link{
+    color: #1dcffd;
     transition: none;
-    font-size: 0.9em;
-    &:hover {
+    font-size: .9em;
+    &:hover{
       cursor: pointer;
     }
   }
-  &:hover {
-    .services-item-link {
+  &:hover{
+    .services-item-link{
       color: #fff;
     }
   }
 }
 
 .services-item:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  background: -o-linear-gradient(348.97deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(101.03deg, #6c834b 0, $supportColor 100%);
+  background: -o-linear-gradient(348.97deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(101.03deg, #1dcffd 0, #f2d580 100%);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .services-item:hover {
   cursor: pointer;
   color: #fff;
-  -webkit-box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.25),
-    4px 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.25),
-    4px 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .25), 4px 0 10px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25), 4px 0 10px rgba(0, 0, 0, .25)
 }
 
 .services-item:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .services-item-title {
   font-size: 45px;
   font-weight: 900;
-  letter-spacing: 0.115em;
+  letter-spacing: .115em;
   line-height: 1.3;
   margin-bottom: 41px;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 @media only screen and (max-width: 1300px) {
   .services-item-title {
     font-size: 40px;
-    margin-bottom: 35px;
+    margin-bottom: 35px
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .services-item-title {
     font-size: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 25px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .services-item-title {
     font-size: 25px;
-    margin-bottom: 14px;
+    margin-bottom: 14px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .services-item-title {
-    font-size: 23px;
+    font-size: 23px
   }
 }
 
 .services-item-comment {
   font-size: 18px;
   line-height: 1.3;
-  letter-spacing: 0.115em;
+  letter-spacing: .115em;
   font-weight: 300;
   margin-bottom: 13px;
   margin-top: -41px;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 @media only screen and (max-width: 1300px) {
   .services-item-comment {
-    margin-top: -35px;
+    margin-top: -35px
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .services-item-comment {
-    margin-top: -25px;
+    margin-top: -25px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .services-item-comment {
     font-size: 12px;
-    margin-top: -14px;
+    margin-top: -14px
   }
 }
 
 .services-item-text {
   font-size: 25px;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 @media only screen and (max-width: 1300px) {
   .services-item-text {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .services-item-text {
-    font-size: 14px;
+    font-size: 14px
   }
   .services-item-text br {
-    display: none;
+    display: none
   }
 }
 
 @media only screen and (max-width: 1300px) {
   .services-item {
-    min-height: 230px;
+    min-height: 230px
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .services-item {
-    padding: 20px;
+    padding: 20px
   }
 }
 
@@ -1647,13 +1545,13 @@ label.radio .radio-custom:before {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    min-height: auto;
+    min-height: auto
   }
   .services-item.order-start {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
-    order: -1;
+    order: -1
   }
 }
 
@@ -1662,29 +1560,29 @@ label.radio .radio-custom:before {
     padding: 10px 15px;
     text-align: center;
     cursor: pointer;
-    color: #fff;
+    color: #fff
   }
   .services-item:before {
-    opacity: 1;
+    opacity: 1
   }
 }
 
 .services-buttons {
-  text-align: right;
+  text-align: right
 }
 
 @media only screen and (max-width: 991px) {
   .services-buttons {
-    text-align: center;
+    text-align: center
   }
 }
 
 .services-btn {
-  border-radius: 4px;
-  background: #262b2e;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  letter-spacing: -0.01em;
+  background: #151515;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  border-radius: 3px;
+  letter-spacing: -.01em;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1698,23 +1596,23 @@ label.radio .radio-custom:before {
   -ms-flex-align: center;
   align-items: center;
   color: #fff;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   position: relative;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .services-btn i {
   margin-right: 1.88em;
   font-size: 1.48em;
   position: relative;
-  top: 2px;
+  top: 2px
 }
 
 @media only screen and (max-width: 768px) {
   .services-btn i.en {
-    margin-right: 3.3em;
+    margin-right: 3.3em
   }
 }
 
@@ -1728,41 +1626,43 @@ label.radio .radio-custom:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 1;
+  z-index: 1
 }
 
 .services-btn:before {
-  content: "";
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(101.03deg, #6c834b 0, $supportColor 100%);
-  border-radius: 4px;
-  transition: 0.3s ease;
-  opacity: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: -o-linear-gradient(348.97deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(101.03deg, #1dcffd 0, #f2d580 100%);
+  border-radius: 3px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 0
 }
 
 .services-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.25),
-    4px 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.25),
-    4px 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .25), 4px 0 10px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25), 4px 0 10px rgba(0, 0, 0, .25)
 }
 
 .services-btn:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .services-btn:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 @media only screen and (max-width: 1300px) {
   .services-btn {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
@@ -1771,12 +1671,12 @@ label.radio .radio-custom:before {
     font-size: 14px;
     padding: 14px;
     min-width: 258px;
-    text-align: center;
+    text-align: center
   }
 }
 
 .person-title {
-  margin-bottom: 45px;
+  margin-bottom: 45px
 }
 
 .person-row {
@@ -1791,7 +1691,7 @@ label.radio .radio-custom:before {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1799,14 +1699,14 @@ label.radio .radio-custom:before {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center
   }
 }
 
 @media only screen and (max-width: 420px) {
   .person-row {
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 0
   }
 }
 
@@ -1816,18 +1716,18 @@ label.radio .radio-custom:before {
 }
 
 .person-col.col-1 {
-  width: 20%;
+  width: 20%
 }
 
 @media only screen and (max-width: 1200px) {
   .person-col.col-1 {
-    width: auto;
+    width: auto
   }
 }
 
 @media only screen and (max-width: 420px) {
   .person-col.col-1 {
-    width: 50%;
+    width: 50%
   }
 }
 
@@ -1835,12 +1735,12 @@ label.radio .radio-custom:before {
   width: 40%;
   text-align: center;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 @media only screen and (max-width: 1200px) {
   .person-col.col-2 {
-    width: 100%;
+    width: 100%
   }
 }
 
@@ -1851,86 +1751,82 @@ label.radio .radio-custom:before {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 44px;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 @media only screen and (max-width: 420px) {
   .person-item {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
 }
 
 .person-item:hover {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5)
 }
 
 .person-item:hover .person-info {
-  color: #fff;
+  color: #fff
 }
 
 .person-item:hover .person-info:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .person-img {
   font-size: 0;
-  max-height: 167px;
+  max-height: 167px
 }
 
 .person-img img {
-  width: 100%;
+  width: 100%
 }
 
 .person-info {
   background: #fff;
   padding: 8px 8px 6px;
   color: #1e1d1d;
-  position: relative;
+  position: relative
 }
 
 .person-info:before {
-  content: "";
+  content: '';
   position: absolute;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  background: -o-linear-gradient(
-    175.63deg,
-    $supportColor 0.07%,
-    #6c834b 100.02%
-  );
-  background: linear-gradient(274.37deg, $supportColor 0.07%, #6c834b 100.02%);
+  background: -o-linear-gradient(175.63deg, #f2d580 .07%, #1dcffd 100.02%);
+  background: linear-gradient(274.37deg, #f2d580 .07%, #1dcffd 100.02%)
 }
 
 .person-name {
   font-weight: 900;
   font-size: 14px;
-  letter-spacing: 0.115em;
+  letter-spacing: .115em;
   margin-bottom: 5px;
   text-transform: uppercase;
   line-height: 1.3;
   position: relative;
   z-index: 1;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  white-space: nowrap;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  white-space: nowrap
 }
 
 @media only screen and (max-width: 420px) {
   .person-name {
-    font-size: 10px;
+    font-size: 10px
   }
 }
 
@@ -1939,26 +1835,26 @@ label.radio .radio-custom:before {
   font-size: 12px;
   position: relative;
   z-index: 1;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 @media only screen and (max-width: 420px) {
   .person-position {
-    font-size: 9px;
+    font-size: 9px
   }
 }
 
 .person-position[data-hidden] {
-  opacity: 0;
+  opacity: 0
 }
 
 .person-btn {
   padding: 15px 47px 16px 18px;
-  background: #262b2e;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: #151515;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
   border-radius: 3px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1973,22 +1869,22 @@ label.radio .radio-custom:before {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 44px;
-  font-weight: 500;
+  font-weight: 500
 }
 
 .person-btn:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%)
 }
 
 .person-btn span {
@@ -2003,9 +1899,9 @@ label.radio .radio-custom:before {
   -ms-flex-align: center;
   align-items: center;
   color: #fff;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   font-size: 25px;
-  text-transform: uppercase;
+  text-transform: uppercase
 }
 
 .person-btn i {
@@ -2014,92 +1910,87 @@ label.radio .radio-custom:before {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex
 }
 
 .person-btn:hover {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .person-btn:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .person-btn:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 @media only screen and (max-width: 1300px) {
   .person-btn span {
-    font-size: 20px;
+    font-size: 20px
   }
 }
 
 @media only screen and (max-width: 768px) {
   .person-btn {
     padding: 14px;
-    background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-    background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+    background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+    background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%)
   }
   .person-btn span {
-    font-size: 14px;
+    font-size: 14px
   }
   .person-btn:before {
-    display: none;
+    display: none
   }
 }
 
 .media {
-  padding: 64px 0 60px;
-  &-title {
-    margin-bottom: 32px;
-  }
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-left: -15px;
-    margin-right: -15px;
-    justify-content: center;
-    .media-item {
-      display: block;
-      font-size: 0;
-      width: calc(100% / 7);
-      padding: 0 15px;
-      @include mq(991) {
-        width: calc(100% / 5);
-      }
-      @include mq(576) {
-        width: calc(100% / 3);
-      }
+  padding: 64px 0 60px
+}
 
-      img {
-        max-width: 100%;
-        object-fit: contain;
-        transition: 0.3s linear;
-      }
-      &:hover {
-        cursor: pointer;
+.media-title {
+  margin-bottom: 64px
+}
 
-        @include mqMin(1200) {
-          img {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
+.media-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 0
+}
+
+@media only screen and (max-width: 991px) {
+  .media-row {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
   }
 }
+
 
 .support {
   position: relative;
   max-width: 100vw;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .support-title {
-  margin-bottom: -11px;
+  margin-bottom: -11px
 }
 
 .support-info {
@@ -2108,7 +1999,7 @@ label.radio .radio-custom:before {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
   -ms-flex: 2;
-  flex: 2;
+  flex: 2
 }
 
 .support-info-bg {
@@ -2118,7 +2009,7 @@ label.radio .radio-custom:before {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0
 }
 
 .support-info-bg img {
@@ -2126,12 +2017,12 @@ label.radio .radio-custom:before {
   max-height: 100%;
   position: absolute;
   bottom: 18%;
-  right: 38px;
+  right: 38px
 }
 
 @media only screen and (max-width: 991px) {
   .support-info-bg img {
-    bottom: 35px;
+    bottom: 35px
   }
 }
 
@@ -2140,28 +2031,28 @@ label.radio .radio-custom:before {
     bottom: 140px;
     right: 3%;
     width: 110px;
-    max-width: 25%;
+    max-width: 25%
   }
 }
 
 .support-info-text {
-  color: #262b2e;
+  color: #151515;
   text-align: left;
-  font-size: 1.1em;
+  font-size: 1.1em
 }
 
 @media only screen and (max-width: 768px) {
   .support-info-text {
     text-align: center;
-    font-size: 0.9em;
+    font-size: .9em
   }
 }
 
 @media only screen and (max-width: 375px) {
   .support-info-text {
-    font-size: 0.7em;
+    font-size: .7em;
     margin-left: -5px;
-    margin-right: -10px;
+    margin-right: -10px
   }
 }
 
@@ -2170,68 +2061,68 @@ label.radio .radio-custom:before {
   display: inline-block;
   top: 2px;
   margin-right: 6px;
-  font-size: 1.2em;
+  font-size: 1.2em
 }
 
 .support-info-text:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 12px
 }
 
 .support-info-contacts {
-  display: none;
+  display: none
 }
 
 @media only screen and (max-width: 991px) {
   .support-info-contacts {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
 }
 
 .support-subtitle {
   font-size: 30px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: #2a3238;
-  margin-bottom: 95px;
+  margin-bottom: 95px
 }
 
 @media only screen and (max-width: 1200px) {
   .support-subtitle {
     font-size: 25px;
     margin-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 80px
   }
   .support-subtitle span {
-    display: inline-block;
+    display: inline-block
   }
 }
 
 @media only screen and (max-width: 991px) {
   .support-subtitle {
-    text-align: center;
+    text-align: center
   }
 }
 
 @media only screen and (max-width: 768px) {
   .support-subtitle {
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 50px
   }
 }
 
 .support-social-label {
   text-transform: uppercase;
   font-size: 24px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   margin-bottom: 4px;
-  color: #1e1d1d;
+  color: #1e1d1d
 }
 
 @media only screen and (max-width: 768px) {
   .support-social-label {
     font-size: 18px;
-    text-align: center;
+    text-align: center
   }
 }
 
@@ -2247,7 +2138,7 @@ label.radio .radio-custom:before {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
   }
 }
 
@@ -2255,63 +2146,63 @@ label.radio .radio-custom:before {
   font-weight: 700;
   font-size: 25px;
   line-height: 1.16;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   padding: 26px 15px 25px;
   width: 80%;
   color: #fff;
   max-width: 500px;
   position: relative;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   display: block;
   text-align: center;
-  background: #262b2e;
+  background: #151515;
   margin-bottom: 150px;
   text-decoration: none;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  border-radius: 3px
 }
 
 .support-btn span {
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .support-btn:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   border-radius: 2px;
   top: 0;
-  background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+  background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .support-btn:hover {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .support-btn:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .support-btn:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 @media only screen and (max-width: 1200px) {
   .support-btn {
-    margin-bottom: 150px;
+    margin-bottom: 150px
   }
 }
 
@@ -2320,7 +2211,7 @@ label.radio .radio-custom:before {
     font-size: 20px;
     width: 70%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
   }
 }
 
@@ -2329,11 +2220,11 @@ label.radio .radio-custom:before {
     margin-bottom: 90px;
     font-size: 14px;
     padding: 15px;
-    background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-    background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+    background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+    background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%)
   }
   .support-btn:before {
-    display: none;
+    display: none
   }
 }
 
@@ -2341,7 +2232,7 @@ label.radio .radio-custom:before {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex
 }
 
 @media only screen and (max-width: 991px) {
@@ -2350,7 +2241,7 @@ label.radio .radio-custom:before {
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse
   }
 }
 
@@ -2362,32 +2253,32 @@ label.radio .radio-custom:before {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding-top: 140px;
+  padding-top: 140px
 }
 
 @media only screen and (max-width: 1300px) {
   .support-connect {
-    padding-top: 127px;
+    padding-top: 127px
   }
 }
 
 .support-connect-text {
   color: #fff;
   text-align: left;
-  font-size: 0.9em;
+  font-size: .9em
 }
 
 @media only screen and (max-width: 1200px) {
   .support-connect-text {
-    font-size: 0.75em;
+    font-size: .75em
   }
 }
 
 @media only screen and (max-width: 375px) {
   .support-connect-text {
-    font-size: 0.7em;
+    font-size: .7em;
     margin-left: -5px;
-    margin-right: -10px;
+    margin-right: -10px
   }
 }
 
@@ -2396,56 +2287,56 @@ label.radio .radio-custom:before {
   display: inline-block;
   top: 2px;
   margin-right: 6px;
-  font-size: 1.2em;
+  font-size: 1.2em
 }
 
 .support-connect-text:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 12px
 }
 
 .support-connect-buttons {
   width: 100%;
-  text-align: center;
+  text-align: center
 }
 
 .support-connect:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 50vw;
-  background: -o-linear-gradient(286.5deg, #6c834b 0, $supportColor 99.07%);
-  background: linear-gradient(163.5deg, #6c834b 0, $supportColor 99.07%);
+  background: -o-linear-gradient(286.5deg, #1dcffd 0, #f2d580 99.07%);
+  background: linear-gradient(163.5deg, #1dcffd 0, #f2d580 99.07%)
 }
 
 @media only screen and (max-width: 991px) {
   .support-connect:before {
     width: 100vw;
-    left: -15px;
+    left: -15px
   }
 }
 
 .support-connect-wrap {
-  height: 100%;
+  height: 100%
 }
 
 .support-connect-title {
   font-size: 29px;
   margin-bottom: 135px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff;
   width: 100%;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 2
 }
 
 @media only screen and (max-width: 991px) {
   .support-connect-title {
-    margin-bottom: 40px;
+    margin-bottom: 40px
   }
 }
 
@@ -2454,11 +2345,11 @@ label.radio .radio-custom:before {
   width: 340px;
   max-width: 100%;
   text-align: center;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: #fff;
   font-size: 25px;
-  background: #262b2e;
+  background: #151515;
   border-radius: 3px;
   font-weight: 700;
   height: 80px;
@@ -2478,28 +2369,28 @@ label.radio .radio-custom:before {
   overflow: hidden;
   margin-left: auto;
   text-decoration: none;
-  margin-right: auto;
+  margin-right: auto
 }
 
 .support-connect-btn:before {
-  content: "";
+  content: '';
   position: absolute;
   top: -1px;
   left: -1px;
   bottom: -1px;
   right: -1px;
-  background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   opacity: 0;
-  border-radius: 3px;
+  border-radius: 3px
 }
 
 .support-connect-btn span {
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .support-connect-btn i {
@@ -2508,31 +2399,31 @@ label.radio .radio-custom:before {
   left: 20px;
   top: 0;
   line-height: 2.4em;
-  z-index: 1;
+  z-index: 1
 }
 
 .support-connect-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
 }
 
 .support-connect-btn:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .support-connect-btn:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 @media only screen and (max-width: 991px) {
   .support-connect-btn {
     font-size: 20px;
-    height: 70px;
+    height: 70px
   }
   .support-connect-btn i {
-    line-height: 3em;
+    line-height: 3em
   }
 }
 
@@ -2540,7 +2431,7 @@ label.radio .radio-custom:before {
   .support-connect-btn {
     height: 55px;
     font-size: 14px;
-    max-width: 80%;
+    max-width: 80%
   }
 }
 
@@ -2548,12 +2439,12 @@ label.radio .radio-custom:before {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  left: 15px;
+  left: 15px
 }
 
 @media only screen and (max-width: 1200px) {
   .support-connect {
-    padding-left: 15px;
+    padding-left: 15px
   }
 }
 
@@ -2561,16 +2452,16 @@ label.radio .radio-custom:before {
   .support-connect {
     padding-top: 30px;
     padding-left: 0;
-    padding-bottom: 15px;
+    padding-bottom: 15px
   }
   .support-connect .support-connect-contacrs {
-    display: none;
+    display: none
   }
 }
 
 @media only screen and (max-width: 480px) {
   .support-connect {
-    padding-bottom: 15px;
+    padding-bottom: 15px
   }
 }
 
@@ -2587,14 +2478,14 @@ label.radio .radio-custom:before {
   display: flex;
   padding: 25px 15px;
   background: -o-linear-gradient(
-    286.5deg,
-    rgba(29, 207, 253, 0.3) 0,
-    rgba(242, 213, 128, 0.3) 99.07%
+                  286.5deg,
+                  rgba(29, 207, 253, 0.3) 0,
+                  rgba(242, 213, 128, 0.3) 99.07%
   );
   background: linear-gradient(
-    163.5deg,
-    rgba(29, 207, 253, 0.3) 0,
-    rgba(242, 213, 128, 0.3) 99.07%
+                  163.5deg,
+                  rgba(29, 207, 253, 0.3) 0,
+                  rgba(242, 213, 128, 0.3) 99.07%
   );
   transition: opacity 0.3s linear;
   transform: translateY(100vh);
@@ -2667,80 +2558,58 @@ label.radio .radio-custom:before {
   }
 }
 
+
 .popup-title {
   font-weight: 700;
   text-align: center;
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 24px
 }
 
 @media only screen and (max-width: 768px) {
   .popup-title {
-    font-size: 18px;
+    font-size: 18px
   }
 }
-.popup-subtitle {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 24px;
-}
+
 .popup-line {
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: column;
-  input {
-    &:placeholder-shown {
-      & ~ .popup-line-name {
-        font-size: 0;
-        opacity: 0;
-      }
-    }
-  }
-  &.error {
-    input {
-      border: 1px solid #ff3e41;
-    }
-  }
+  margin-bottom: 16px
 }
 
 .popup-line-btn {
-  display: none;
+  display: none
 }
 
 .popup-line-btn.active {
-  display: block;
+  display: block
 }
 
 .popup-line-btn.error .popup-line-comment {
-  color: #ff3e41;
+  color: #ff3e41
 }
 
 .popup-line.good .popup-line-comment {
-  color: #4ddb45;
+  color: #4ddb45
 }
 
 .popup-line.error .popup-line-name {
-  color: #ff3e41;
+  color: #ff3e41
 }
 
 .popup-line-name {
-  font-size: 0.8em;
-  margin-bottom: 8px;
-  order: -1;
-  transition: 0.3s linear;
-  opacity: 1;
+  font-size: .8em;
+  margin-bottom: 8px
 }
 
 .popup-line-comment {
-  font-size: 0.7em;
-  opacity: 0.8;
+  font-size: .7em;
+  opacity: .8;
   font-style: italic;
   margin-bottom: 8px;
-  margin-top: -6px;
+  margin-top: -6px
 }
 
-.popup-line input,
-.popup-line textarea {
+.popup-line input, .popup-line textarea {
   display: block;
   width: 100%;
   background: 0 0;
@@ -2748,71 +2617,65 @@ label.radio .radio-custom:before {
   font-family: Roboto, sans-serif;
   padding: 15px;
   border-radius: 3px;
-  border: 1px solid #6c834b;
+  border: 1px solid #1dcffd;
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
-.popup-line input::-webkit-input-placeholder,
-.popup-line textarea::-webkit-input-placeholder {
-  opacity: 0.7;
-  font-weight: 300;
+.popup-line input::-webkit-input-placeholder, .popup-line textarea::-webkit-input-placeholder {
+  opacity: .7;
+  font-weight: 300
 }
 
-.popup-line input::-moz-placeholder,
-.popup-line textarea::-moz-placeholder {
-  opacity: 0.7;
-  font-weight: 300;
+.popup-line input::-moz-placeholder, .popup-line textarea::-moz-placeholder {
+  opacity: .7;
+  font-weight: 300
 }
 
-.popup-line input:-ms-input-placeholder,
-.popup-line textarea:-ms-input-placeholder {
-  opacity: 0.7;
-  font-weight: 300;
+.popup-line input:-ms-input-placeholder, .popup-line textarea:-ms-input-placeholder {
+  opacity: .7;
+  font-weight: 300
 }
 
-.popup-line input::-ms-input-placeholder,
-.popup-line textarea::-ms-input-placeholder {
-  opacity: 0.7;
-  font-weight: 300;
+.popup-line input::-ms-input-placeholder, .popup-line textarea::-ms-input-placeholder {
+  opacity: .7;
+  font-weight: 300
 }
 
-.popup-line input::placeholder,
-.popup-line textarea::placeholder {
-  opacity: 0.7;
-  font-weight: 300;
+.popup-line input::placeholder, .popup-line textarea::placeholder {
+  opacity: .7;
+  font-weight: 300
 }
 
-.popup-line input:focus,
-.popup-line textarea:focus {
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+.popup-line input:focus, .popup-line textarea:focus {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .2)
 }
 
 .popup-line textarea {
   resize: none;
   height: 100px;
-  overflow: auto;
+  overflow: auto
 }
 
 .popup-line textarea::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  cursor: pointer;
+  cursor: pointer
 }
 
 .popup-line textarea::-webkit-scrollbar-track {
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, .1)
 }
 
 .popup-line textarea::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #6c834b;
+  background: #1dcffd
 }
 
 .popup-line-values {
@@ -2822,16 +2685,16 @@ label.radio .radio-custom:before {
   display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .popup-line-values .radio {
   width: auto;
-  margin-bottom: 8px;
+  margin-bottom: 8px
 }
 
 .popup-line-values .radio:not(:last-child) {
-  margin-right: 16px;
+  margin-right: 16px
 }
 
 .popup-file {
@@ -2839,61 +2702,61 @@ label.radio .radio-custom:before {
   width: 100%;
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: #fff;
-  background: #262b2e;
+  background: #151515;
   border-radius: 3px;
   padding: 10px 15px;
   border: none;
   text-align: center;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  position: relative
 }
 
 .popup-file input {
-  display: none;
+  display: none
 }
 
 .popup-file ~ .popup-line-comment {
-  margin-top: 4px;
+  margin-top: 4px
 }
 
 .popup-file:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+  background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .popup-file span {
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .popup-file:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
 }
 
 .popup-file:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .popup-file:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 .popup-btn {
@@ -2902,82 +2765,82 @@ label.radio .radio-custom:before {
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   color: #fff;
-  background: #262b2e;
+  background: #151515;
   border-radius: 3px;
   padding: 23px 15px;
   border: none;
   text-align: center;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  position: relative
 }
 
 .popup-btn[disabled] {
-  opacity: 0.6;
-  pointer-events: none;
+  opacity: .6;
+  pointer-events: none
 }
 
 .popup-btn:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  background: -o-linear-gradient(358.99deg, #6c834b 0, $supportColor 100%);
-  background: linear-gradient(91.01deg, #6c834b 0, $supportColor 100%);
+  background: -o-linear-gradient(358.99deg, #1dcffd 0, #f2d580 100%);
+  background: linear-gradient(91.01deg, #1dcffd 0, #f2d580 100%);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 
 .popup-btn span {
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
 .popup-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
 }
 
 .popup-btn:hover:before {
-  opacity: 1;
+  opacity: 1
 }
 
 .popup-btn:active:before {
-  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .3)
 }
 
 .lang-wrap {
-  position: relative;
+  position: relative
 }
 
 .lang-wrap a {
   text-decoration: none;
-  color: inherit;
+  color: inherit
 }
 
 .lang-changer {
   display: inline-block;
   position: relative;
   margin-left: auto;
-  z-index: 10;
+  z-index: 10
 }
 
 .lang-changer:hover {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .lang-changer:hover ~ .lang-list {
-  display: block;
+  display: block
 }
 
 .lang-btn {
@@ -2989,13 +2852,13 @@ label.radio .radio-custom:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 0;
+  padding: 4px 0
 }
 
 .lang-btn svg {
   width: 17px;
   height: 17px;
-  fill: #fff;
+  fill: #fff
 }
 
 .lang-icon {
@@ -3003,14 +2866,14 @@ label.radio .radio-custom:before {
   margin-right: 12px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
 
 .lang-text {
   text-transform: uppercase;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 20px
 }
 
 .lang-list {
@@ -3024,38 +2887,38 @@ label.radio .radio-custom:before {
   -webkit-transform: translate(50%, 0);
   -ms-transform: translate(50%, 0);
   transform: translate(50%, 0);
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 2px
 }
 
 .lang-list:hover {
-  display: block;
+  display: block
 }
 
 .lang-list:before {
-  content: "";
+  content: '';
   position: absolute;
   border-style: solid;
   border-width: 0 5px 5px;
-  border-color: rgba(255, 255, 255, 0.2) transparent;
+  border-color: rgba(255, 255, 255, .2) transparent;
   display: block;
   width: 0;
   z-index: 1;
   margin-left: -5px;
   top: -5px;
-  left: 50%;
+  left: 50%
 }
 
 .lang-list li {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 2px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  border-radius: 2px
 }
 
 .lang-list li:hover {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, .2)
 }
 
 .lang-list li a {
@@ -3067,5 +2930,6 @@ label.radio .radio-custom:before {
   text-decoration: none;
   text-align: center;
   line-height: 40px;
-  font-size: 14px;
+  font-size: 14px
 }
+

@@ -1,5 +1,11 @@
 @import "old";
 
+@mixin mq($width) {
+  @media only screen and (max-width: $width + px) {
+    @content;
+  }
+}
+
 .statistics-counts {
   margin-left: -15px;
   margin-right: -15px;
@@ -89,11 +95,11 @@
     font-size: 0;
     text-decoration: none;
     @include mq(1300) {
-      max-width: calc(17% - 25px);
+      max-width: calc(17% - 25px)
     }
     @include mq(991) {
       max-width: calc(17% - 30px);
-      margin: 0 15px 30px;
+      margin: 0 15px 30px
     }
     @include mq(768) {
       max-width: calc(25% - 30px);
@@ -101,6 +107,7 @@
     @include mq(576) {
       max-width: calc(50% - 30px);
     }
+
 
     &:hover {
       cursor: pointer;
@@ -114,25 +121,21 @@
       cursor: pointer;
 
       img {
-        transform: scale(0.99);
+        transform: scale(.99);
       }
     }
+
   }
 
   img {
     max-width: 100%;
     max-height: 100%;
-    transition: 0.3s linear;
+    transition: .3s linear;
   }
 }
-.person {
-  padding: 60px 0;
-  @include mq(768) {
-    padding: 40px 0;
-  }
-}
+
 .person-name {
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
 }
 
 .person-img {
@@ -145,409 +148,34 @@
     img {
       height: 277px;
       width: auto;
+
     }
   }
 }
-.about-row {
+.about-row{
   display: flex;
   margin: 0 -30px;
-  @include mq(991) {
+  @include mq(991){
     margin: 0;
     flex-wrap: wrap;
   }
 
-  .about-group {
+  .about-group{
     width: 50%;
     padding: 0 30px;
-    @include mq(991) {
-      .list-square {
+    @include mq(991){
+      .list-square{
         margin: auto;
       }
       padding: 0;
       width: 100%;
-      &:not(:last-child) {
+      &:not(:last-child){
         margin-bottom: 40px;
       }
     }
   }
-  .mission {
+  .mission{
     padding-top: 0;
     padding-bottom: 0;
-  }
-}
-.old-section {
-  display: none !important;
-}
-.dib {
-  display: inline-block;
-}
-.section-description {
-  padding: 60px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include mq(768) {
-    padding: 40px 0;
-  }
-
-  .description-text {
-    font-size: 32px;
-    &:not(:last-child) {
-      margin-bottom: 1.5em;
-    }
-
-    @include mq(768) {
-      font-size: 24px;
-    }
-    @include mq(576) {
-      font-size: 18px;
-    }
-    @include mq(375) {
-      font-size: 16px;
-    }
-  }
-}
-.how-work {
-  padding: 60px 0;
-  @include mq(768) {
-    padding: 40px 0;
-  }
-  &__title {
-    margin-bottom: 48px;
-  }
-  &__row {
-    margin: 0 -15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__cell {
-    padding: 0 15px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    @include mq(991) {
-      width: 100%;
-      &:not(:last-child) {
-        margin-bottom: 64px;
-      }
-    }
-    .cell {
-      &-footer {
-        display: flex;
-        justify-content: center;
-        padding-top: 48px;
-        .cell-btn {
-          text-align: center;
-          padding-left: 32px;
-          padding-right: 32px;
-          cursor: pointer;
-          min-width: 440px;
-          justify-content: center;
-          background: #ffffff;
-          color: #262b2e;
-          &:hover {
-            color: #fff;
-            background: transparent;
-          }
-          @include mq(991) {
-            min-width: auto;
-          }
-          @include mq(480) {
-            width: 280px;
-          }
-        }
-      }
-      &-title {
-        color: $mainColor;
-        font-size: 32px;
-        margin-bottom: 8px;
-        text-align: center;
-        @include mq(576) {
-          font-size: 24px;
-        }
-      }
-      &-subtitle {
-        margin-bottom: 32px;
-        font-weight: 400;
-        font-size: 18px;
-        text-align: center;
-        @include mq(576) {
-          font-size: 16px;
-        }
-      }
-      &-steps {
-        flex: 2;
-        li {
-          position: relative;
-          padding-left: 30px;
-          font-size: 24px;
-          @include mq(768) {
-            font-size: 18px;
-          }
-          @include mq(576) {
-            font-size: 16px;
-          }
-          .step-comment {
-            font-size: 0.7em;
-            margin-top: 4px;
-          }
-          &:not(:last-child) {
-            margin-bottom: 1em;
-          }
-          .steps-number {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 30px;
-            color: $mainColor;
-          }
-        }
-      }
-    }
-  }
-}
-.reasons {
-  padding: 60px 0;
-  &-title {
-    font-size: 32px;
-    margin-bottom: 1.5em;
-  }
-  .reasons-list {
-    max-width: 100%;
-    margin-bottom: 48px;
-    li {
-    }
-  }
-  .reasons-footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    .reasons-btn {
-      text-align: center;
-      padding-left: 32px;
-      padding-right: 32px;
-      cursor: pointer;
-      min-width: 440px;
-      justify-content: center;
-      margin: 0 24px 24px;
-      @include mq(991) {
-        min-width: 360px;
-      }
-      @include mq(768) {
-        min-width: 280px;
-      }
-    }
-  }
-}
-
-.results {
-  padding: 60px 0;
-  text-align: center;
-  &-title {
-  }
-  &-subtitle {
-    font-size: 24px;
-    margin-bottom: 48px;
-    @include mq(991) {
-      text-align: center;
-    }
-  }
-  &-row {
-    display: flex;
-    margin: 0 -15px;
-    flex-wrap: wrap;
-    @include mq(1200) {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-  }
-  &-cell {
-    padding: 0 15px;
-    min-width: 27%;
-    margin-bottom: 32px;
-    @include mq(1200) {
-      min-width: 50%;
-    }
-    @include mq(768) {
-      width: 100%;
-      padding: 0;
-    }
-    &--max {
-      min-width: 500px;
-      @include mq(1200) {
-        width: 100%;
-        min-width: auto;
-      }
-    }
-  }
-  &-value {
-    color: $mainColor;
-    font-size: 72px;
-    white-space: nowrap;
-    font-weight: 700;
-    @include mq(768) {
-      font-size: 54px;
-    }
-  }
-  &-label {
-    font-size: 24px;
-    @include mq(768) {
-      font-size: 18px;
-    }
-    @include mq(480) {
-      font-size: 16px;
-    }
-    @include mq(375) {
-      font-size: 14px;
-    }
-  }
-}
-.main-link {
-  &:hover {
-    cursor: pointer;
-  }
-}
-.activities {
-  padding: 60px 0;
-  &-title {
-    margin-bottom: 48px;
-  }
-  @include mq(991) {
-    text-align: center;
-  }
-  &-texts {
-    p {
-      font-size: 32px;
-      margin-bottom: 1.5em;
-      @include mq(768) {
-        font-size: 24px;
-      }
-      @include mq(576) {
-        font-size: 18px;
-      }
-      @include mq(375) {
-        font-size: 16px;
-      }
-    }
-  }
-  &-footer {
-    display: flex;
-    justify-content: center;
-  }
-  &-statistic {
-    margin-bottom: 32px;
-    &__title {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-    &__list {
-      display: flex;
-      margin: 0 -15px;
-      flex-wrap: wrap;
-      @include mq(991) {
-        justify-content: center;
-      }
-    }
-    &__info {
-      padding: 0 15px;
-      min-width: 27%;
-      margin-bottom: 48px;
-
-      @include mq(768) {
-        width: 100%;
-        padding: 0;
-      }
-    }
-    &__value {
-      color: $mainColor;
-      font-size: 72px;
-      white-space: nowrap;
-      font-weight: 700;
-      @include mq(768) {
-        font-size: 54px;
-      }
-    }
-    &__label {
-      font-size: 24px;
-      @include mq(768) {
-        font-size: 24px;
-      }
-      @include mq(576) {
-        font-size: 18px;
-      }
-      @include mq(375) {
-        font-size: 16px;
-      }
-    }
-  }
-  &-btn {
-    text-align: center;
-    padding-left: 32px;
-    padding-right: 32px;
-    cursor: pointer;
-    min-width: 440px;
-    justify-content: center;
-    background: #ffffff;
-    color: #262b2e;
-    &:hover {
-      color: #fff;
-      background: #262b2e;
-    }
-    @include mq(991) {
-      min-width: auto;
-    }
-    @include mq(480) {
-      width: 280px;
-    }
-  }
-}
-.armed-forces {
-  padding: 60px 0;
-
-  @include mq(991) {
-    text-align: center;
-  }
-  &__swiper {
-    margin-top: 32px;
-  }
-  &__logos {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-  &__pagination{
-    margin: 32px auto 0;
-    .swiper-pagination-bullet-active{
-      background: $mainColor;
-    }
-  }
-  &__logo {
-    font-size: 0;
-    padding: 15px;
-    height: 150px;
-    width: calc(100% / 8);
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include mq(991) {
-      padding: 5px;
-    }
-    @include mq(768) {
-      width: calc(100% / 6);
-    }
-    @include mq(576) {
-      width: calc(100% / 4);
-    }
-
-    img {
-      object-fit: contain;
-      max-width: 100%;
-      max-height: 100%;
-    }
   }
 }
