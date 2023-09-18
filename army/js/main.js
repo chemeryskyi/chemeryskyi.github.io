@@ -314,7 +314,7 @@ function buildPersons() {
                 } class="person-col col-1">
 					<div class="person-item">
 						<div class="person-img ${(person.scaleImg && "person-img--scaled") || ""}">
-						    <img src="/img/persons/${person.img}" alt="${person.name}">
+						    <img src="/img/persons/${person.img}" alt="${person.name}" loading="lazy" width="197" height="295">
 						</div>
 						<div class="person-info">
 						    <b class="person-name">${person.name}</b>
@@ -460,6 +460,61 @@ function buildArmedGroups() {
   `;
   beforeWrap.before(section);
 }
+function createPagination(swiper) {
+  const slidesCount = swiper.slides.length;
+  const rowCounts = () => (window.innerWidth >= 576 ? 3 : 2);
+  const slideByPoint = () =>
+    window.innerWidth >= 991
+      ? 8
+      : window.innerWidth >= 640
+      ? 6
+      : window.innerWidth >= 480
+      ? 4
+      : 3;
+  function setActiveSlide(){
+    const list = Array.prototype.slice.call(pagination.children);
+    list.forEach((el) => el.classList.remove("active"));
+    const nextIndex =
+        swiper.activeIndex / slideByPoint() > 1
+            ? Math.ceil(swiper.activeIndex / slideByPoint())
+            : Math.round(swiper.activeIndex / slideByPoint());
+
+    const nextActive = list[nextIndex];
+    nextActive && nextActive.classList.add("active");
+  }
+
+  function slideToFirst(){
+    const slideSize = swiper.slidesSizesGrid.find((x) => x);
+    const rect = swiper.el.getBoundingClientRect();
+    swiper.slideTo(Math.round(rect.left / slideSize));
+  }
+
+  const pointsCount = Math.ceil(
+    swiper.slides.length / slideByPoint() / rowCounts(),
+  );
+  const container = swiper.el;
+  const pagination = container.querySelector(".armed-forces__pagination");
+  pagination.innerHTML = null;
+
+  while (pagination.querySelectorAll(".pagination-item").length < pointsCount) {
+    const paginationItem = document.createElement("span");
+    paginationItem.classList.add("pagination-item");
+    paginationItem.addEventListener("click", (e) => {
+      const list = Array.prototype.slice.call(pagination.children);
+      const index = list.indexOf(paginationItem);
+      if (!index) {
+        slideToFirst()
+      } else {
+        swiper.slideTo(index * slideByPoint());
+      }
+    });
+    swiper.on("slideChange", setActiveSlide);
+    pagination.appendChild(paginationItem);
+  }
+  slideToFirst();
+  setActiveSlide();
+}
+
 function initSwiper() {
   document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper(".armed-forces__swiper", {
@@ -469,18 +524,12 @@ function initSwiper() {
         rows: 3,
       },
       on: {
-        init(e) {
-          const slideSize = e.slidesSizesGrid.find((x) => x);
-          const rect = e.el.getBoundingClientRect();
-          e.slideTo(Math.ceil(rect.left / slideSize));
+        resize(e) {
+          createPagination(e);
         },
       },
-      pagination: {
-        el: ".armed-forces__pagination",
-        clickable: true,
-      },
       freeMode: {
-        enabled: true
+        enabled: true,
       },
       breakpoints: {
         320: {
@@ -496,6 +545,7 @@ function initSwiper() {
           },
         },
         576: {
+          slidesPerView: 4,
           grid: {
             rows: 3,
           },

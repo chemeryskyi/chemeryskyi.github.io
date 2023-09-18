@@ -394,10 +394,10 @@ section .container {
 }
 
 .section-bg {
-  background: #fff url(/army/img/bg-light.png) center no-repeat;
+  background: #fff url(/img/bg-light.png) center no-repeat;
   background-size: 100% 100%;
   &-dark {
-    background: #262b2e url(/army/img/bg-dark.png) center no-repeat;
+    background: #262b2e url(/img/bg-dark.png) center no-repeat;
     background-size: 100% 100%;
     color: #fff;
   }
@@ -533,27 +533,31 @@ label.radio .radio-custom:before {
     background-size: contain;
     position: absolute;
     bottom: -1px;
-    @include mq(1200){
+    @include mq(1200) {
       background: url("/army/images/burning-moscow-5.svg") left bottom no-repeat;
       background-size: auto;
     }
+    z-index: 1;
   }
   &:after {
     content: "";
     inset: 0;
-    background: url("/army/images/burning-moscow-5-fire.svg") right bottom no-repeat;
+    background: url("/army/images/burning-moscow-5-fire.png") right bottom
+      no-repeat;
     background-size: contain;
     position: absolute;
     bottom: -1px;
-    @include mq(1200){
-      background: url("/army/images/burning-moscow-5-fire.svg") left bottom no-repeat;
+    z-index: 0;
+    @include mq(1200) {
+      background: url("/army/images/burning-moscow-5-fire.png") left bottom
+        no-repeat;
       background-size: auto;
     }
   }
 
   .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -1884,7 +1888,8 @@ label.radio .radio-custom:before {
 }
 
 .person-img img {
-  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .person-info {
