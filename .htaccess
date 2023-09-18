@@ -9,3 +9,6 @@ RewriteRule ^(.*)$ $1.html
 AddDefaultCharset UTF-8
 
 
+<FilesMatch "\.(html|htm|txt|css|js)$">
+    Header set Cache-Control "max-age=31536000"
+</FilesMatch>
